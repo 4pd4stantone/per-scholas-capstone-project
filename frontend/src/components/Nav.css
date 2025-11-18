@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+nav {
+  border-bottom: 1.5px rgb(168, 168, 168) solid;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;            
+  text-decoration: none;
+  transition: opacity 150ms ease-in-out;  
+  cursor: pointer;
+  margin: 0 0 0 20px;
+  padding: 5px 0 8px 0;
+}
+.nav-logo-link:hover {
+  opacity: 80%;       
+}
+
+.nav-logo-img {
+  width: 35px;           
+  height: 35px;         
+  border-radius: 10px;   
+  object-fit: cover;    
+}
+
+.nav-logo-title {
+  font-size: 18px;       
+  line-height: 10px;
+  font-weight: 700;        
+  color:  #111827; 
+  font-family:  Arial;
+  padding: 5px;
+}
+.create-event-link {
+  font-size: 10px;       
+  line-height: 10px;
+  font-weight: 100;        
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav-create-event-title {
+  font-size: 12px;       
+  line-height: 10px;
+  font-weight: 500;        
+  color:  #111827; 
+  font-family:  Arial;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 150ms ease-in-out;  
+} 
+.create-event-title:hover {
+  background-color: rgb(230, 230, 230);
+
+} 

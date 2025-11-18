@@ -1,21 +1,26 @@
-import { useEffect } from 'react'
-import './App.css'
+import { useEffect, useState } from 'react'
+import './App.css';
+import Nav from './components/Nav';
+import CreateEvent from './pages/CreateEvent';
 
 function App() {
 
-  useEffect(() => {
+  const [danceStudioSocials, setDanceStudioSocials] = useState([]);
 
-    async function test() {
-        const response = await fetch('http://localhost:8080');
-        const result = await response.json();
-        console.log(result)
+  useEffect(() => {
+    async function getDanceStudioSocials() {
+        const response = await fetch('http://localhost:8080/danceStudioSocials');
+        const data = await response.json();
+        console.log(data);
+        setDanceStudioSocials(data)
     }
-    test()
+    getDanceStudioSocials()
   }, [])
 
   return (
     <>
-     
+     <Nav />
+     <CreateEvent />
     </>
   )
 }
