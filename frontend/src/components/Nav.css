@@ -58,7 +58,7 @@ nav {
   border-radius: 10px;
   transition: background-color 150ms ease-in-out;  
 } 
-.create-event-title:hover {
+.nav-create-event-title:hover {
   background-color: rgb(230, 230, 230);
 
 } 
