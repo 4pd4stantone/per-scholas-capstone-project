@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./CreateEvent.css";
 import DanceStudioForm from "../components/DanceStudioForm";
 import ClubForm from "../components/ClubForm"; 
@@ -7,7 +7,25 @@ import CongressForm from "../components/CongressForm";
 
 export default function CreateEvent() {
   const [socialForm, setSocialForm] = useState(null);
+  const [socials, setSocials] = useState([]);
 
+
+
+  useEffect(() => {
+    async function getSocials() {
+        const response = await fetch('http://localhost:8080/Socials');
+        const data = await response.json();
+        console.log(data);
+        setSocials(data)
+    }
+    getSocials()
+  }, [])
+
+
+  function createEvent(formData) {
+    const eventType= formData.get("eventType")
+    console.log(eventType)
+  }
 
   return (
     <main>
@@ -20,14 +38,14 @@ export default function CreateEvent() {
           available features and options for your event.
         </p>
       </section>
-      <form action="submit" method="POST">
+      <form action={createEvent} method="POST">
         <div>
           <div className="event-type-box-row">
             <label>
               <div className="event-type-radio-box">
                 <input
                   type="radio"
-                  name="evnetType"
+                  name="eventType"
                   className="event-type-radio-btns"
                   value="Dance Studio Social"
                   onChange={(e) => setSocialForm(e.target.value)}
@@ -40,7 +58,7 @@ export default function CreateEvent() {
               <div className="event-type-radio-box">
                 <input
                   type="radio"
-                  name="evnetType"
+                  name="eventType"
                   className="event-type-radio-btns"
                   value="Club Social"
                   onChange={(e) => setSocialForm(e.target.value)}
@@ -55,7 +73,7 @@ export default function CreateEvent() {
               <div className="event-type-radio-box">
                 <input
                   type="radio"
-                  name="evnetType"
+                  name="eventType"
                   className="event-type-radio-btns"
                   value="Outdoor Social"
                   onChange={(e) => setSocialForm(e.target.value)}
@@ -68,7 +86,7 @@ export default function CreateEvent() {
               <div className="event-type-radio-box">
                 <input
                   type="radio"
-                  name="evnetType"
+                  name="eventType"
                   className="event-type-radio-btns"
                   value="Congress/Festival"
                   onChange={(e) => setSocialForm(e.target.value)}
@@ -89,8 +107,10 @@ export default function CreateEvent() {
           : 
           <button id="create-event-submit-btn" disabled>Create Event</button>}
         </div>
-        
       </form>
+      <ul>
+        {socials}
+      </ul>
     </main>
   );
 }

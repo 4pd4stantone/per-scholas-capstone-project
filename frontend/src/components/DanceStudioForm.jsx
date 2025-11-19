@@ -8,7 +8,7 @@ export default function DanceStudioForm() {
         <input id="hostName" name="hostName" type="text" required />
       </div>
 
-      <div className="form-styling">
+      {/* <div className="form-styling">
         <label htmlFor="hostCompany">Host Company *</label>
         <input id="hostCompany" name="hostCompany" type="text" required />
       </div>
@@ -277,7 +277,7 @@ export default function DanceStudioForm() {
           min="0"
           step="0.01"
         />
-      </div>
+      </div> */}
     </>
   );
 }
