@@ -2,9 +2,10 @@ body {
   margin: 0;
 }
 nav {
-  border-bottom: 1.5px rgb(168, 168, 168) solid;
+  border-bottom: 1.5px #bfbfbf solid;
   display: flex;
   position: sticky;
+  background-color: #fafafa;
   top: 0;
 }
 
