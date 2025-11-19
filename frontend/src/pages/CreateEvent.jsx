@@ -85,7 +85,9 @@ export default function CreateEvent() {
         {socialForm === "Outdoor Social" ? <OutdoorForm /> : null}
         {socialForm === "Congress/Festival" ? <CongressForm /> : null}
         <div>
-          <button id="create-event-submit-btn">Create Event</button>
+          {socialForm === "Dance Studio Social" ? <button id="create-event-submit-btn">Create Event</button> 
+          : 
+          <button id="create-event-submit-btn" disabled>Create Event</button>}
         </div>
         
       </form>

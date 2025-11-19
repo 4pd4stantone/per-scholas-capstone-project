@@ -1,41 +1,38 @@
 export default function DanceStudioForm() {
   return (
     <>
-      <h4 className="form-title-styling">Host Information</h4>
+      <h3>Host Information</h3>
+
       <div className="form-styling">
-        <label htmlFor="">
-          Host Name *
-          <input type="text" placeholder="Enter full name" />
-        </label>
+        <label htmlFor="hostName">Host Name *</label>
+        <input id="hostName" name="hostName" type="text" required />
       </div>
+
       <div className="form-styling">
-        <label htmlFor="">
-          Host Email *
-          <input type="email" placeholder="Email@example.com" />
-        </label>
+        <label htmlFor="hostCompany">Host Company *</label>
+        <input id="hostCompany" name="hostCompany" type="text" required />
       </div>
+
       <div className="form-styling">
-        <label htmlFor="">
-          Host Company *
-          <input type="text" placeholder="Enter company name" />
-        </label>
+        <label htmlFor="hostEmail">Host Email *</label>
+        <input id="hostEmail" name="hostEmail" type="email" required />
       </div>
-      <h4 className="form-title-styling">Event Information</h4>
+
+      <h3>Event Information</h3>
+
       <div className="form-styling">
-        <label htmlFor="">
-          Event Title *
-          <input type="text" placeholder="Enter event title" />
-        </label>
+        <label htmlFor="eventTitle">Event Title *</label>
+        <input id="eventTitle" name="eventTitle" type="text" required />
       </div>
+
       <div className="form-styling">
-        <label htmlFor="">
-          Event Description *
-          <textarea type="text" placeholder="Describe your event..." />
-        </label>
+        <label htmlFor="eventDescription">Event Description *</label>
+        <textarea id="eventDescription" name="eventDescription" required />
       </div>
+
       <div className="form-styling">
-        <label for="dance-style">Choose a dance style *</label>
-        <select id="dance-style" name="danceStyle">
+        <label htmlFor="danceStyles">Dance Style *</label>
+        <select id="danceStyles" name="danceStyles" required>
           <option value="">Select an option</option>
           <option value="Salsa on 2">Salsa on 2</option>
           <option value="Urban Bachata">Urban Bachata</option>
@@ -47,125 +44,65 @@ export default function DanceStudioForm() {
           <option value="Cumbia">Cumbia</option>
           <option value="Mainstream Music">Mainstream Music</option>
         </select>
-        <div className="form-styling">
-          <label for="dressCode">Dress Code *</label>
-          <select id="dressCode" name="dressCode">
-            <option value="">Select a dress code</option>
-            <option value="No Dress Code">No Dress Code</option>
-            <option value="Casual">Casual</option>
-            <option value="Formal (Required)">Formal (Required)</option>
-            <option value="Formal (Encouraged)">Formal (Encouraged)</option>
-            <option value="Theme/Costumed (Required)">
-              Theme/Costumed (Required)
-            </option>
-            <option value="Theme/Costumed (Encouraged)">
-              Theme/Costumed (Encouraged)
-            </option>
-          </select>
-        </div>
       </div>
+
       <div className="form-styling">
-        <label htmlFor="event-datetime">
-          Event Start Date & Time *
-          <input type="datetime-local" name="event-datetime" />
-        </label>
-      </div>
-      <div className="form-styling">
-        <label htmlFor="event-datetime">
-          Event End Date & Time *
-          <input type="datetime-local" name="event-datetime" />
-        </label>
-      </div>
-      <div className="form-styling">
-        <label>
-          <input type="checkbox" name="recurrence" value="true" />
-          This event repeats
-        </label>
-      </div>
-      <div className="form-styling">
-        <label for="frequency">Frequency</label>
-        <select id="frequency" name="frequency">
-          <option value="">Select frequency</option>
-          <option value="weekly">Weekly</option>
-          <option value="bi-weekly">Bi-weekly</option>
-          <option value="monthly">Monthly</option>
+        <label htmlFor="dressCode">Dress Code *</label>
+        <select id="dressCode" name="dressCode" required>
+          <option value="">Select</option>
+          <option value="No Dress Code">No Dress Code</option>
+          <option value="Casual">Casual</option>
+          <option value="Formal (Required)">Formal (Required)</option>
+          <option value="Formal (Encouraged)">Formal (Encouraged)</option>
+          <option value="Theme/Costumed (Required)">
+            Theme/Costumed (Required)
+          </option>
+          <option value="Theme/Costumed (Encouraged)">
+            Theme/Costumed (Encouraged)
+          </option>
         </select>
       </div>
+
+      <h3>Venue Information</h3>
+
       <div className="form-styling">
-        <label for="repeatCount">Number of occurrences</label>
-        <input
-          type="number"
-          id="repeatCount"
-          name="repeatCount"
-          min="1"
-          max="12"
-          placeholder="#"
-        />
+        <label htmlFor="venueName">Venue Name *</label>
+        <input id="venueName" name="venueName" type="text" required />
       </div>
+
       <div className="form-styling">
-        <label for="price">Price *</label>
-        <input
-          type="number"
-          id="price"
-          name="price"
-          min="0"
-          step="1"
-          required
-        />
+        <label htmlFor="venueStreet">Street Address *</label>
+        <input id="venueStreet" name="venueStreet" type="text" required />
       </div>
+
       <div className="form-styling">
-        <label for="price">Student Price *</label>
-        <input
-          type="number"
-          id="price"
-          name="price"
-          min="0"
-          step="1"
-          required
-        />
+        <label htmlFor="venueCity">City *</label>
+        <input id="venueCity" name="venueCity" type="text" required />
       </div>
+
       <div className="form-styling">
-        <label>
-          <input type="checkbox" name="isFree" value="true" />
-          This event is free
-        </label>
-      </div>
-      <h4 className="form-title-styling">Venue Information</h4>
-      <div className="form-styling">
-        <label htmlFor="">
-          Venue Name *
-          <input type="text" placeholder="Enter venue name" />
-        </label>
-      </div>
-      <div className="form-styling">
-        <label htmlFor="">
-          Street *
-          <input type="text" placeholder="555 Example Street 5th floor" />
-        </label>
-      </div>
-      <div className="form-styling">
-        <label htmlFor="">
-          City *
-          <input type="text" placeholder="Enter street" />
-        </label>
-      </div>
-      <div className="form-styling">
-        <label for="borough">Borough/NYC Area</label>
-        <select id="borough" name="borough">
-          <option value="">Select an option</option>
+        <label htmlFor="venueNYC">NYC Area</label>
+        <select id="venueNYC" name="venueNYC">
+          <option value="">Select</option>
           <option value="Bronx">Bronx</option>
           <option value="Brooklyn">Brooklyn</option>
           <option value="Manhattan">Manhattan</option>
-          <option value="Sensual Bachata">Queens</option>
+          <option value="Queens">Queens</option>
           <option value="Staten Island">Staten Island</option>
           <option value="Long Island">Long Island</option>
           <option value="Westchester">Westchester</option>
         </select>
       </div>
+
       <div className="form-styling">
-        <label for="state">State</label>
-        <select id="state" name="state">
+        <label htmlFor="venueState">State *</label>
+        <select id="venueState" name="venueState" required>
           <option value="">Select a state</option>
+          <option value="NY" defaultValue="NY">
+            NY
+          </option>
+          <option value="NJ">NJ</option>
+          <option value="CT">CT</option>
           <option value="AL">AL</option>
           <option value="AK">AK</option>
           <option value="AZ">AZ</option>
@@ -218,10 +155,33 @@ export default function DanceStudioForm() {
           <option value="WY">WY</option>
         </select>
       </div>
+
       <div className="form-styling">
-        <label for="floorType">Floor Type *</label>
-        <select id="floorType" name="floorType">
-          <option value="">Select a floor type</option>
+        <label htmlFor="venueZipCode">Zip Code *</label>
+        <input
+          id="venueZipCode"
+          name="venueZipCode"
+          type="text"
+          pattern="[0-9]{5}"
+          required
+        />
+      </div>
+
+      <div className="form-styling">
+        <label htmlFor="venueCountry">Country *</label>
+        <input
+          id="venueCountry"
+          name="venueCountry"
+          type="text"
+          defaultValue="USA"
+          required
+        />
+      </div>
+
+      <div className="form-styling">
+        <label htmlFor="floorType">Floor Type *</label>
+        <select id="floorType" name="floorType" required>
+          <option value="">Select</option>
           <option value="Unknown">Unknown</option>
           <option value="Hardwood">Hardwood</option>
           <option value="Dance Floor (Sprung/Professional)">
@@ -233,6 +193,90 @@ export default function DanceStudioForm() {
           <option value="Lawn">Lawn</option>
           <option value="Concrete">Concrete</option>
         </select>
+      </div>
+
+      <h3>Event Timing</h3>
+
+      <div className="form-styling">
+        <label htmlFor="startDateTime">Start Date & Time *</label>
+        <input
+          id="startDateTime"
+          name="startDateTime"
+          type="datetime-local"
+          required
+        />
+      </div>
+
+      <div className="form-styling">
+        <label htmlFor="endDateTime">End Date & Time *</label>
+        <input
+          id="endDateTime"
+          name="endDateTime"
+          type="datetime-local"
+          required
+        />
+      </div>
+
+      <h3>Recurrence</h3>
+
+      <div className="form-styling">
+        <label>
+          <input type="checkbox" name="recurrence" value="true" />
+          This event repeats
+        </label>
+      </div>
+
+      <div className="form-styling">
+        <label htmlFor="frequency">Frequency</label>
+        <select id="frequency" name="frequency">
+          <option value="">Select</option>
+          <option value="weekly">Weekly</option>
+          <option value="bi-weekly">Bi-weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+      </div>
+
+      <div className="form-styling">
+        <label htmlFor="repeatCount">Number of Occurrences</label>
+        <input
+          id="repeatCount"
+          name="repeatCount"
+          type="number"
+          min="1"
+          max="12"
+        />
+      </div>
+
+      <h3>Pricing</h3>
+
+      <div className="form-styling">
+        <label htmlFor="price">General Admission Price *</label>
+        <input
+          id="price"
+          name="price"
+          type="number"
+          min="0"
+          step="0.01"
+          required
+        />
+      </div>
+
+      <div className="form-styling">
+        <label>
+          <input type="checkbox" name="isFree" value="true" />
+          This event is free
+        </label>
+      </div>
+
+      <div className="form-styling">
+        <label htmlFor="studentPrice">Student Price</label>
+        <input
+          id="studentPrice"
+          name="studentPrice"
+          type="number"
+          min="0"
+          step="0.01"
+        />
       </div>
     </>
   );
