@@ -8,15 +8,40 @@ import CongressForm from "../components/CongressForm";
 export default function CreateEvent() {
   const [socialForm, setSocialForm] = useState(null);
   const [socials, setSocials] = useState([]);
-  const eventTypeRef = useRef(null);
-  const hostNameRef = useRef(null);
+  const refs = {
+    eventType: useRef(null),
+    hostName: useRef(null),
+    hostCompany: useRef(null),
+    hostEmail: useRef(null),
+    eventTitle: useRef(null),
+    eventDescription: useRef(null),
+    danceStyles: useRef(null),
+    dressCode: useRef(null),
+    venueName: useRef(null),
+    venueStreet: useRef(null),
+    venueCity: useRef(null),
+    venueNYC: useRef(null),
+    venueState: useRef(null),
+    venueZipCode: useRef(null),
+    venueCountry: useRef(null),
+    floorType: useRef(null),
+    startDateTime: useRef(null),
+    endDateTime: useRef(null),
+    recurrence: useRef(null),
+    frequency: useRef(null),
+    repeatCount: useRef(null),
+    price: useRef(null),
+    isFree: useRef(null),
+    studentPrice: useRef(null),
+    imgUrl: useRef(null),
+  };
 
   useEffect(() => {
     async function getSocials() {
       const response = await fetch("http://localhost:8080/Socials");
       const data = await response.json();
       console.log(data);
-      // setSocials(data)
+      setSocials(data)
     }
     getSocials();
   }, []);
@@ -25,8 +50,34 @@ export default function CreateEvent() {
     e.preventDefault();
 
     const socialFormData = {
-      eventType: eventTypeRef.current.value,
-      hostName: hostNameRef.current.value,
+      eventType: refs.eventType.current.value,
+      hostName: refs.hostName.current.value,
+      hostCompany: refs.hostCompany.current.value,
+      hostEmail: refs.hostEmail.current.value,
+
+      event: {
+      eventTitle: refs.eventTitle.current.value,
+      eventDescription: refs.eventDescription.current.value,
+      danceStyles: refs.danceStyles.current.value,
+      dressCode: refs.dressCode.current.value,
+      venueName: refs.venueName.current.value,
+      venueStreet: refs.venueStreet.current.value,
+      venueCity: refs.venueCity.current.value,
+      venueNYC: refs.venueNYC.current.value,
+      venueState: refs.venueState.current.value,
+      venueZipCode: refs.venueZipCode.current.value,
+      venueCountry: refs.venueCountry.current.value,
+      floorType: refs.floorType.current.value,
+      startDateTime: refs.startDateTime.current.value,
+      endDateTime: refs.endDateTime.current.value,
+      recurrence: refs.recurrence.current.checked,
+      frequency: refs.frequency.current.value,
+      repeatCount: refs.repeatCount.current.value,
+      price: refs.price.current.value,
+      isFree: refs.isFree.current.checked,
+      studentPrice: refs.studentPrice.current.value,
+      imgUrl: refs.imgUrl.current.value,
+      }
     };
     console.log(socialFormData);
 
@@ -71,7 +122,7 @@ export default function CreateEvent() {
                   value="Dance Studio Social"
                   onChange={(e) => setSocialForm(e.target.value)}
                   required
-                  ref={eventTypeRef}
+                  ref={refs.eventType}
                 />
                 Dance Studio Social
               </div>
@@ -126,8 +177,7 @@ export default function CreateEvent() {
           ) : null}
         </div>
         {socialForm === "Dance Studio Social" ? (
-          <DanceStudioForm 
-          hostNameRef={hostNameRef} />
+          <DanceStudioForm refs={refs} />
         ) : null}
         {socialForm === "Club Social" ? <ClubForm /> : null}
         {socialForm === "Outdoor Social" ? <OutdoorForm /> : null}

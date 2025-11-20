@@ -1,40 +1,40 @@
-import { useRef } from 'react'
+import { useRef } from 'react';
 
-export default function DanceStudioForm({hostNameRef}) {
+export default function DanceStudioForm({ refs }) {
   return (
     <>
       <h3>Host Information</h3>
 
       <div className="form-styling">
         <label htmlFor="hostName">Host Name *</label>
-        <input id="hostName" name="hostName" type="text" required ref={hostNameRef}/>
+        <input id="hostName" name="hostName" type="text" required ref={refs.hostName}/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="hostCompany">Host Company *</label>
-        <input id="hostCompany" name="hostCompany" type="text" required />
+        <input id="hostCompany" name="hostCompany" type="text" required ref={refs.hostCompany}/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="hostEmail">Host Email *</label>
-        <input id="hostEmail" name="hostEmail" type="email" required />
+        <input id="hostEmail" name="hostEmail" type="email" required ref={refs.hostEmail}/>
       </div>
 
       <h3>Event Information</h3>
 
       <div className="form-styling">
         <label htmlFor="eventTitle">Event Title *</label>
-        <input id="eventTitle" name="eventTitle" type="text" required />
+        <input id="eventTitle" name="eventTitle" type="text" required ref={refs.eventTitle}/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="eventDescription">Event Description *</label>
-        <textarea id="eventDescription" name="eventDescription" required />
+        <textarea id="eventDescription" name="eventDescription" required ref={refs.eventDescription}/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="danceStyles">Dance Style *</label>
-        <select id="danceStyles" name="danceStyles" required>
+        <select id="danceStyles" name="danceStyles" required ref={refs.danceStyles}>
           <option value="">Select an option</option>
           <option value="Salsa on 2">Salsa on 2</option>
           <option value="Urban Bachata">Urban Bachata</option>
@@ -50,7 +50,7 @@ export default function DanceStudioForm({hostNameRef}) {
 
       <div className="form-styling">
         <label htmlFor="dressCode">Dress Code *</label>
-        <select id="dressCode" name="dressCode" required>
+        <select id="dressCode" name="dressCode" required ref={refs.dressCode}>
           <option value="">Select</option>
           <option value="No Dress Code">No Dress Code</option>
           <option value="Casual">Casual</option>
@@ -69,22 +69,22 @@ export default function DanceStudioForm({hostNameRef}) {
 
       <div className="form-styling">
         <label htmlFor="venueName">Venue Name *</label>
-        <input id="venueName" name="venueName" type="text" required />
+        <input id="venueName" name="venueName" type="text" required ref={refs.venueName}/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="venueStreet">Street Address *</label>
-        <input id="venueStreet" name="venueStreet" type="text" required />
+        <input id="venueStreet" name="venueStreet" type="text" required ref={refs.venueStreet}/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="venueCity">City *</label>
-        <input id="venueCity" name="venueCity" type="text" required />
+        <input id="venueCity" name="venueCity" type="text" required ref={refs.venueCity}/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="venueNYC">NYC Area</label>
-        <select id="venueNYC" name="venueNYC">
+        <select id="venueNYC" name="venueNYC" ref={refs.venueNYC}>
           <option value="">Select</option>
           <option value="Bronx">Bronx</option>
           <option value="Brooklyn">Brooklyn</option>
@@ -98,7 +98,7 @@ export default function DanceStudioForm({hostNameRef}) {
 
       <div className="form-styling">
         <label htmlFor="venueState">State *</label>
-        <select id="venueState" name="venueState" required>
+        <select id="venueState" name="venueState" required ref={refs.venueState}>
           <option value="">Select a state</option>
           <option value="NY" defaultValue="NY">
             NY
@@ -166,6 +166,7 @@ export default function DanceStudioForm({hostNameRef}) {
           type="text"
           pattern="[0-9]{5}"
           required
+          ref={refs.venueZipCode}
         />
       </div>
 
@@ -177,12 +178,13 @@ export default function DanceStudioForm({hostNameRef}) {
           type="text"
           defaultValue="USA"
           required
+          ref={refs.venueCountry}
         />
       </div>
 
       <div className="form-styling">
         <label htmlFor="floorType">Floor Type *</label>
-        <select id="floorType" name="floorType" required>
+        <select id="floorType" name="floorType" required ref={refs.floorType}>
           <option value="">Select</option>
           <option value="Unknown">Unknown</option>
           <option value="Hardwood">Hardwood</option>
@@ -206,6 +208,7 @@ export default function DanceStudioForm({hostNameRef}) {
           name="startDateTime"
           type="datetime-local"
           required
+          ref={refs.startDateTime}
         />
       </div>
 
@@ -216,6 +219,7 @@ export default function DanceStudioForm({hostNameRef}) {
           name="endDateTime"
           type="datetime-local"
           required
+          ref={refs.endDateTime}
         />
       </div>
 
@@ -223,14 +227,14 @@ export default function DanceStudioForm({hostNameRef}) {
 
       <div className="form-styling">
         <label>
-          <input type="checkbox" name="recurrence" value="true" />
+          <input type="checkbox" name="recurrence" value="true" ref={refs.recurrence}/>
           This event repeats
         </label>
       </div>
 
       <div className="form-styling">
         <label htmlFor="frequency">Frequency</label>
-        <select id="frequency" name="frequency">
+        <select id="frequency" name="frequency" ref={refs.frequency}>
           <option value="">Select</option>
           <option value="weekly">Weekly</option>
           <option value="bi-weekly">Bi-weekly</option>
@@ -246,6 +250,7 @@ export default function DanceStudioForm({hostNameRef}) {
           type="number"
           min="1"
           max="12"
+          ref={refs.repeatCount}
         />
       </div>
 
@@ -260,12 +265,13 @@ export default function DanceStudioForm({hostNameRef}) {
           min="0"
           step="0.01"
           required
+          ref={refs.price}
         />
       </div>
 
       <div className="form-styling">
         <label>
-          <input type="checkbox" name="isFree" value="true" />
+          <input type="checkbox" name="isFree" value="true" ref={refs.isFree}/>
           This event is free
         </label>
       </div>
@@ -278,6 +284,20 @@ export default function DanceStudioForm({hostNameRef}) {
           type="number"
           min="0"
           step="0.01"
+          ref={refs.studentPrice}
+        />
+      </div>
+      <h3>Event Flyer</h3>
+
+      <div className="form-styling">
+        <label htmlFor="price">
+            Image URL
+        </label>
+        <input
+          id="img-url"
+          name="imgUrl"
+          type="text"
+          ref={refs.imgUrl}
         />
       </div>
     </>
