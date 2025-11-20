@@ -1,0 +1,9 @@
+
+
+header {
+  border-bottom: 1.5px #bfbfbf solid;
+  display: flex;
+  position: sticky;
+  background-color: #fafafa;
+  top: 58.5px;
+}

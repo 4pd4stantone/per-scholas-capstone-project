@@ -2,7 +2,7 @@ import logoImg from '../assets/nav-logo-img.png'
 import './Nav.css'
 
 
-export default function Header() {
+export default function Nav() {
 
     return (
         <nav >

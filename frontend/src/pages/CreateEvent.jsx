@@ -7,7 +7,6 @@ import CongressForm from "../components/CongressForm";
 
 export default function CreateEvent() {
   const [socialForm, setSocialForm] = useState(null);
-  const [socials, setSocials] = useState([]);
   const refs = {
     eventType: useRef(null),
     hostName: useRef(null),
@@ -36,15 +35,6 @@ export default function CreateEvent() {
     imgUrl: useRef(null),
   };
 
-  useEffect(() => {
-    async function getSocials() {
-      const response = await fetch("http://localhost:8080/Socials");
-      const data = await response.json();
-      console.log(data);
-      setSocials(data)
-    }
-    getSocials();
-  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -192,15 +182,6 @@ export default function CreateEvent() {
           )}
         </div>
       </form>
-      <ul>
-        {socials.map((social, _id) => {
-          return (
-            <li key={social._id}>
-              {social.eventType} Hosted by: {social.hostName}
-            </li>
-          );
-        })}
-      </ul>
     </main>
   );
 }
