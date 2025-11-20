@@ -20,7 +20,7 @@ cloudinary.config({
 //   },
 // });
 
-const image = './images/Lorenz.png';
+const image = './images/Empire.png';
 
 cloudinary.uploader.upload(image).then(result => {
     console.log(result)

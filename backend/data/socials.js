@@ -1,0 +1,280 @@
+const socials = [
+  {
+    eventType: "Dance Studio Social",
+    hostName: "Howie & Pat Lorenz",
+    hostCompany: "Lorenz Latin Dance Studio",
+    hostEmail: "info@LorenzDanceStudio.com",
+    event: {
+      eventTitle: "Friday Night Latin Social - Manhattan",
+      eventDescription:
+        "Alternating Friday social at Lorenz's Manhattan studio with salsa on 2 and bachata.",
+      danceStyles: "Salsa on 2",
+      venueName: "Lorenz Latin Dance Studio - Manhattan",
+      venueStreet: "2153 Second Avenue",
+      venueCity: "New York",
+      venueNYC: "Manhattan",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "10029",
+      dressCode: "Casual",
+      floorType: "Hardwood",
+      startDateTime: "2025-11-21T21:00:00",
+      endDateTime: "2025-11-22T00:00:00",
+      recurrence: true,
+      frequency: "weekly",
+      repeatCount: 12,
+      price: 15,
+      isFree: false,
+      studentPrice: 10,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png"
+    }
+  },
+
+  {
+    eventType: "Dance Studio Social",
+    hostName: "Howie & Pat Lorenz",
+    hostCompany: "Lorenz Latin Dance Studio",
+    hostEmail: "info@LorenzDanceStudio.com",
+    event: {
+      eventTitle: "Saturday Night Latin Social - Manhattan",
+      eventDescription:
+        "Alternating Saturday social at Lorenz's Manhattan studio with salsa on 2 and bachata.",
+      danceStyles: "Salsa on 2",
+      venueName: "Lorenz Latin Dance Studio - Manhattan",
+      venueStreet: "2153 Second Avenue",
+      venueCity: "New York",
+      venueNYC: "Manhattan",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "10029",
+      dressCode: "Casual",
+      floorType: "Hardwood",
+      startDateTime: "2025-11-22T21:00:00",
+      endDateTime: "2025-11-23T00:00:00",
+      recurrence: true,
+      frequency: "weekly",
+      repeatCount: 12,
+      price: 15,
+      isFree: false,
+      studentPrice: 10,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png"
+    }
+  },
+
+  {
+    eventType: "Dance Studio Social",
+    hostName: "Howie & Pat Lorenz",
+    hostCompany: "Lorenz Latin Dance Studio",
+    hostEmail: "info@LorenzDanceStudio.com",
+    event: {
+      eventTitle: "Friday Night Latin Social - Nassau",
+      eventDescription:
+        "Weekly Latin social at Lorenz;s Floral Park (Nassau) studio; playing salsa and bachata.",
+      danceStyles: "Salsa on 2",
+      venueName: "Lorenz Latin Dance Studio - Nassau",
+      venueStreet: "246-14 Jericho Turnpike",
+      venueCity: "Floral Park",
+      venueNYC: "Long Island",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "11001",
+      dressCode: "Casual",
+      floorType: "Hardwood",
+      startDateTime: "2025-11-21T21:00:00",
+      endDateTime: "2025-11-22T00:00:00",
+      recurrence: true,
+      frequency: "weekly",
+      repeatCount: 12,
+      price: 15,
+      isFree: false,
+      studentPrice: 10,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png"
+    }
+  },
+
+  {
+    eventType: "Dance Studio Social",
+    hostName: "Wil Nieves",
+    hostCompany: "Nieves Latin Dance Studio",
+    hostEmail: "NievesDanceStudio@gmail.com",
+    event: {
+      eventTitle: "Brooklyn Salsa Social",
+      eventDescription:
+        "Weekly Friday social at Nieves' Williamsburg studio featuring New York–style mambo on 2 with classic salsa, cha cha and some bachata.",
+      danceStyles: "Salsa on 2",
+      venueName: "Nieves Latin Dance Studio - Brooklyn",
+      venueStreet: "670 Grand Street",
+      venueCity: "Brooklyn",
+      venueNYC: "Brooklyn",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "11211",
+      dressCode: "Casual",
+      floorType: "Hardwood",
+      startDateTime: "2025-11-21T21:00:00",
+      endDateTime: "2025-11-22T00:30:00",
+      recurrence: true,
+      frequency: "weekly",
+      repeatCount: 12,
+      price: 5,
+      isFree: false,
+      studentPrice: null,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763660959/mjfhy3vyrebzquu0sdfh.png"
+    }
+  },
+
+  {
+    eventType: "Dance Studio Social",
+    hostName: "Wil Nieves",
+    hostCompany: "Nieves Latin Dance Studio",
+    hostEmail: "NievesDanceStudio@gmail.com",
+    event: {
+      eventTitle: "Bronx Salsa Social",
+      eventDescription:
+        "Monthly social at Nieves' Morris Avenue studio with a 1,000 sq ft wooden floor, playing mostly classic salsa and some cha cha and bachata.",
+      danceStyles: "Salsa on 2",
+      venueName: "Nieves Latin Dance Studio - Bronx",
+      venueStreet: "1215 Morris Avenue",
+      venueCity: "Bronx",
+      venueNYC: "Bronx",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "10456",
+      dressCode: "Casual",
+      floorType: "Hardwood",
+      startDateTime: "2025-11-22T21:00:00",
+      endDateTime: "2025-11-23T00:30:00",
+      recurrence: true,
+      frequency: "monthly",
+      repeatCount: 12,
+      price: 5,
+      isFree: false,
+      studentPrice: null,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763660959/mjfhy3vyrebzquu0sdfh.png"
+    }
+  },
+
+  {
+    eventType: "Dance Studio Social",
+    hostName: "Osmar Perrones",
+    hostCompany: "Yamuleé Dance Company",
+    hostEmail: "Osmar@yamulee.com",
+    event: {
+      eventTitle: "Yamuleé Weekender 22nd Anniversary Social",
+      eventDescription:
+        "Two-day event celebrating Yamuleé's 22nd anniversary with workshops, shows and a Saturday night social.",
+      danceStyles: "Salsa on 2",
+      venueName: "Yamuleé Dance Studio",
+      venueStreet: "2435 Grand Concourse",
+      venueCity: "Bronx",
+      venueNYC: "Bronx",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "10468",
+      dressCode: "Casual",
+      floorType: "Hardwood",
+      startDateTime: "2025-08-22T21:00:00",
+      endDateTime: "2025-08-23T02:30:00",
+      recurrence: false,
+      frequency: null,
+      repeatCount: null,
+      price: 30,
+      isFree: false,
+      studentPrice: null,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661181/unvvbckbmvzbdzwz9tnd.png"
+    }
+  },
+
+  {
+    eventType: "Dance Studio Social",
+    hostName: "Joel Dominguez",
+    hostCompany: "LVG Salsa Social",
+    hostEmail: "info@LVGSalsaSocial.com",
+    event: {
+      eventTitle: "LVG Salsa Social at Empire Mambo",
+      eventDescription:
+        "Classic salsa social hosted by JoelSalsa and DJ La Conga; held on Sunday evenings at Empire Mambo Dance Studio.",
+      danceStyles: "Salsa on 2",
+      venueName: "Empire Mambo Dance Studio",
+      venueStreet: "224 W 35th St Floor 15",
+      venueCity: "New York",
+      venueNYC: "Manhattan",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "10001",
+      dressCode: "Casual",
+      floorType: "Hardwood",
+      startDateTime: "2025-11-23T18:00:00",
+      endDateTime: "2025-11-23T22:00:00",
+      recurrence: true,
+      frequency: "bi-weekly",
+      repeatCount: 12,
+      price: 25,
+      isFree: false,
+      studentPrice: 20,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661222/sktncl7ztvylgokvsbk5.png"
+    }
+  },
+
+  {
+    eventType: "Club Social",
+    hostName: "Joel Dominguez",
+    hostCompany: "La Clave NYC",
+    hostEmail: "info@LVGSalsaSocial.com",
+    event: {
+      eventTitle: "La Clave NYC - Classic Salsa with a Taste of Bachata",
+      eventDescription:
+        "Mid-week salsa and bachata social hosted by LVG, JoelSalsa and DJ La Conga at The Secret Room NYC.",
+      danceStyles: "Salsa on 2",
+      venueName: "The Secret Room NYC",
+      venueStreet: "707 8th Ave",
+      venueCity: "New York",
+      venueNYC: "Manhattan",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "10036",
+      dressCode: "Casual",
+      floorType: "Unknown",
+      startDateTime: "2025-11-26T21:00:00",
+      endDateTime: "2025-11-27T02:00:00",
+      recurrence: false,
+      frequency: null,
+      repeatCount: null,
+      price: 20,
+      isFree: false,
+      studentPrice: 15,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661222/sktncl7ztvylgokvsbk5.png"
+    }
+  },
+
+  {
+    eventType: "Dance Studio Social",
+    hostName: "Empire Dance Studio",
+    hostCompany: "Empire Dance Studio",
+    hostEmail: "Info@empiredancestudio.nyc",
+    event: {
+      eventTitle: "The Empire Social: Bachata, Salsa & Sabrosura",
+      eventDescription:
+        "Sunday social at Empire Dance Studio featuring a Dominican bachata class followed by social dancing.",
+      danceStyles: "Urban Bachata",
+      venueName: "Empire Mambo Dance Studio",
+      venueStreet: "224 W 35th St Floor 15",
+      venueCity: "New York",
+      venueNYC: "Manhattan",
+      venueState: "NY",
+      venueCountry: "USA",
+      venueZipCode: "10001",
+      dressCode: "Casual",
+      floorType: "Hardwood",
+      startDateTime: "2025-11-16T17:00:00",
+      endDateTime: "2025-11-16T22:00:00",
+      recurrence: false,
+      frequency: null,
+      repeatCount: null,
+      price: 20,
+      isFree: false,
+      studentPrice: 15,
+      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661308/bayhuexe9ztmtjgqfu7o.png"
+    }
+  }
+];
