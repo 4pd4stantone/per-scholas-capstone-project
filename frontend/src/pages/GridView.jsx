@@ -15,16 +15,32 @@ const [socials, setSocials] = useState([]);
   }, []);
 
     return (
-
-        <>
+        <section id='grid-section'>
+          <h4 id='events-found'>{socials.length} events found</h4>
             {socials.map((social, _id) => {
             return (
-                <div key={social._id} >
-                {social.eventType} Hosted by: {social.hostName}
-                <img style={{width: "50px"}} src="https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png" alt="" />
+              <>
+                <div key={social._id} className='grid-box'>
+                  <div className='img-box'>
+                      <div className='heart-box'>
+                          <img src="" alt="" />
+                        </div>
+                      <div className='img-div'>
+                        
+                        <img className='social-img' src={social.event.imgUrl} alt="Social Logo" />
+                      </div>
+                      <p className='danceStyle'>{social.event.danceStyles}</p>
+                  </div>
+                
+                  <div className='info-box'>
+                      <h4>{social.event.eventTitle}</h4>
+                      <p>{social.event.venueName}</p>
+                      <p>{social.event.startDateTime}</p>
+                  </div>
                 </div>
+              </>
             );
             })}
-        </>
+        </section>
     )
 }

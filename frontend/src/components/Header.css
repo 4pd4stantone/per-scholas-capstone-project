@@ -2,8 +2,79 @@
 
 header {
   border-bottom: 1.5px #bfbfbf solid;
-  display: flex;
+  display: block;
   position: sticky;
   background-color: #fafafa;
   top: 58.5px;
+  margin-bottom: 50px;
+}
+
+#header-top-row {
+  /* outline: 1px red solid; */
+  display: flex;
+  align-items: center;
+}
+#header-title {
+  /* outline: 1px red solid; */
+  font-size: 18px; 
+  font-weight: 700;  
+  color:  #111827; 
+  font-family:  Arial;
+  margin: 0 0 0 20px;
+}
+.header-btn {
+  border: none;
+  margin:  5px 0px 5px 0;
+  width: 80px;
+  height: 30px;
+  font-size: 12px; 
+  font-weight: 500;        
+  color:  #111827; 
+  font-family:  Arial;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: background-color 150ms ease-in-out;  
+  cursor: pointer;
+}
+.header-btn:hover {
+  background-color: rgb(230, 230, 230);
+  color: rgb(109, 109, 109);
+} 
+
+#grid-btn {
+  margin-left: auto;
+  /* outline: 1px red solid; */
+  margin-right: 8px;
+}
+#list-btn {
+  margin-right: 20px;
+   /* outline: 1px red solid; */
+}
+
+
+#header-bottom-row {
+  /* outline: 1px red solid; */
+  display: flex;
+  margin:  5px 20px 5px 20px;
+  gap: 30px;
+}
+.header-inputs {
+  border: #b6b5b5 1.5px solid;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.header-inputs:focus {
+  outline: 1.5px solid red;
+  border: none;
+  padding: 0 10px;
+}
+#date-input-filter {
+  flex-grow: 1;
+}
+#date-input-filter:focus {
+  flex-grow: 1;
+  border: #b6b5b5 1.5px solid;
+}
+#input-search-field {
+  flex-grow: 8;
 }
