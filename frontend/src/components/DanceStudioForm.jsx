@@ -1,14 +1,16 @@
-export default function DanceStudioForm() {
+import { useRef } from 'react'
+
+export default function DanceStudioForm({hostNameRef}) {
   return (
     <>
       <h3>Host Information</h3>
 
       <div className="form-styling">
         <label htmlFor="hostName">Host Name *</label>
-        <input id="hostName" name="hostName" type="text" required />
+        <input id="hostName" name="hostName" type="text" required ref={hostNameRef}/>
       </div>
 
-      {/* <div className="form-styling">
+      <div className="form-styling">
         <label htmlFor="hostCompany">Host Company *</label>
         <input id="hostCompany" name="hostCompany" type="text" required />
       </div>
@@ -277,7 +279,7 @@ export default function DanceStudioForm() {
           min="0"
           step="0.01"
         />
-      </div> */}
+      </div>
     </>
   );
 }
