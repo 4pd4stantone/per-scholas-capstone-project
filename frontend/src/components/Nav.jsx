@@ -3,10 +3,11 @@ import logoImg from '../assets/nav-logo-img.png'
 import './Nav.css'
 
 
-export default function Nav({header, setHeader}) {
+export default function Nav({setHeader, setHeaderBtn}) {
 
     function handleClick () {
         setHeader(true)
+        setHeaderBtn("Grid")
     }
     function handleClickCreateEvent () {
         setHeader(false)
@@ -21,7 +22,7 @@ export default function Nav({header, setHeader}) {
             </div>
             </Link>
             <div className="create-event-link">
-                <Link to="/create-event" onClick={handleClickCreateEvent}>
+                <Link to="/create-event" onClick={handleClickCreateEvent} style={{textDecoration: "none"}}>
                 <h2 className="nav-create-event-title">Create Event</h2>
                 </Link>
             </div>

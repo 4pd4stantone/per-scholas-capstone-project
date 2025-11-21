@@ -33,6 +33,7 @@ header {
   font-family:  Arial;
   padding: 5px 10px;
   border-radius: 8px;
+  background-color:  #fafafa;
   transition: background-color 150ms ease-in-out;  
   cursor: pointer;
 }
@@ -46,9 +47,23 @@ header {
   /* outline: 1px red solid; */
   margin-right: 8px;
 }
+#grid-btn-active {
+  margin-left: auto;
+  /* outline: 1px red solid; */
+  margin-right: 8px;
+  color: white;
+  background-color: #b8493c;
+}
 #list-btn {
   margin-right: 20px;
    /* outline: 1px red solid; */
+}
+#list-btn-active {
+  margin-left: auto;
+  /* outline: 1px red solid; */
+  margin-right: 8px;
+  color: white;
+  background-color: #b8493c;
 }
 
 
@@ -64,7 +79,7 @@ header {
   padding: 0 10px;
 }
 .header-inputs:focus {
-  outline: 1.5px solid red;
+  outline: 1.5px solid #b8493c;
   border: none;
   padding: 0 10px;
 }
@@ -73,7 +88,7 @@ header {
 }
 #date-input-filter:focus {
   flex-grow: 1;
-  border: #b6b5b5 1.5px solid;
+  border: #fafafa 1.5px solid;
 }
 #input-search-field {
   flex-grow: 8;

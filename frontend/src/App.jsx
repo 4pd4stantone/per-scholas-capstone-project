@@ -11,16 +11,23 @@ import ListView from './pages/ListView';
 
 function App() {
 
-  const [header, setHeader] = useState(false)
+  const [header, setHeader] = useState(true)
+  const [headerBtn, setHeaderBtn] = useState("Grid")
+
+  useEffect(() => {
+    setHeaderBtn("Grid");
+  }, []);
 
   return (
     <>
-    <Nav header={header} setHeader={setHeader}/>
-    {header ? <Header /> : ""}
+    <Nav header={header} setHeader={setHeader}
+    
+    />
+    {header ? <Header headerBtn={headerBtn} setHeaderBtn={setHeaderBtn}/> : ""}
     <Routes>
-      <Route path="/socials/grid-view" element={ <GridView />} />
-      <Route path="/socials/list-view" element={ <ListView />} />
-      <Route path="/create-event" element={ <CreateEvent />} />
+      <Route path="/socials/grid-view" element={ <GridView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn}/>} />
+      <Route path="/socials/list-view" element={ <ListView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn}/>} />
+      <Route path="/create-event" element={ <CreateEvent setHeader={setHeader}/>}/>
     </Routes>
      
      

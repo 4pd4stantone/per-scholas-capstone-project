@@ -1,0 +1,45 @@
+#list-section {
+    margin: 20px;
+}
+.list-box {
+    border: 1.5px solid #bfbfbf;
+    display: flex;
+    height: 150px;
+    align-items:center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.list-heart-box {
+    outline: red 1px solid;
+    position: relative;
+    top: -50px;
+    right:-30px;
+    width: 20px;
+}
+.list-img-div {
+    margin: 20px;
+    outline: red 1px solid;
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+}
+.list-social-img {
+    width: 90px;
+    height: 90px;
+    object-fit: fill;
+    border-radius: 20px;
+}
+.list-danceStyle {
+      font-size: 13px;
+    background-color: #b8493c;
+    color: white;
+    margin: 10px auto 10px 10px;
+    padding: 6px 12px;
+    width: 80px;
+    text-align: center;
+    border-radius: 20px;
+}
+.list-info-box {
+    margin: 0px;
+}

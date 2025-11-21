@@ -1,18 +1,29 @@
 import { Link } from "react-router-dom"
 import './Header.css'
+import { useState } from 'react'
 
 
-export default function Header() {
+export default function Header({headerBtn, setHeaderBtn}) {
+
+    function handleClickGrid() {
+        setHeaderBtn("Grid")
+    }
+    function handleClickList() {
+        setHeaderBtn("List")
+    }
 
     return (
         <header >
             <div id='header-top-row'>
                 <h1 id='header-title'>Find the Best Socials in NYC</h1>
                 <Link to='/socials/grid-view' style={{marginLeft: "auto"}}>
-                <button id="grid-btn" className='header-btn'>Grid</button>
+                <button 
+                id={headerBtn === "Grid" ? "grid-btn-active" 
+                : "grid-btn"} className='header-btn' onClick={handleClickGrid}>Grid</button>
                 </Link>
                 <Link to='/socials/list-view'>
-                <button id='list-btn' className='header-btn'>List</button>
+                <button id={headerBtn === "List" ? "list-btn-active" 
+                : "list-btn"} className='header-btn' onClick={handleClickList}>List</button>
                 </Link>
             </div>
             <div id='header-bottom-row'>

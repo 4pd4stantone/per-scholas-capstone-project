@@ -5,7 +5,12 @@ import ClubForm from "../components/ClubForm";
 import OutdoorForm from "../components/OutdoorForm";
 import CongressForm from "../components/CongressForm";
 
-export default function CreateEvent() {
+export default function CreateEvent({ setHeader }) {
+
+  useEffect(() => {
+    setHeader(false);
+  }, []);
+
   const [socialForm, setSocialForm] = useState(null);
   const refs = {
     eventType: useRef(null),
