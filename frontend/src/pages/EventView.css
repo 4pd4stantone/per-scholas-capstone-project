@@ -1,0 +1,29 @@
+
+#event-section {
+    background-color: #fafafa;
+}
+
+#event-box {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1.5px solid #bfbfbf;
+    margin: 10px auto 10px auto;
+    width: 550px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+}
+#img-box {
+    display: flex;
+    justify-content: center;
+    /* outline: 1px red solid; */
+    width: 450px;
+    height: 450px;
+    margin: 0 auto 0 auto;
+}
+
+#social-flyer-img {
+    width: 450px;
+    border-radius: 10px;
+    object-fit: contain;
+    background-color: #000000 ;
+}

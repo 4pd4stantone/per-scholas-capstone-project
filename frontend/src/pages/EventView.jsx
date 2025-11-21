@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import geoDanceLogo from "../assets/nav-logo-img.png"
+import geoDanceLogo from "../assets/nav-logo-img.png";
+import './EventView.css'
 
 
 export default function EventView({setHeader}){
@@ -11,19 +12,19 @@ const [social, setSocial] = useState(null);
     setHeader(false);
   }, []);
 
-  const params = useParams();
-  console.log(params.id)
+  const { id } = useParams();
+  console.log(id)
   
 
   useEffect(() => {
     async function getSocial() {
-      const response = await fetch(`http://localhost:8080/Socials/${params.id}`);
+      const response = await fetch(`http://localhost:8080/Socials/${id}`);
       const data = await response.json();
       console.log(data);
     setSocial(data)
     }
     getSocial();
-  }, [params.id]);
+  }, [id]);
 
   if (!social) {
     return (
@@ -31,11 +32,15 @@ const [social, setSocial] = useState(null);
     )
   } else {
     return (
-        <>
-        <p>Hi</p>
-            <img src={social.event.imgUrl || geoDanceLogo} alt="Social Logo" style={{width: "200px"}}/>
-            <h2>{social.event.eventTitle}</h2>
-        </>
+        <div id="event-section">
+            <div id="event-box">
+                <div id="img-box">
+                    <img src={social.event.imgUrl || geoDanceLogo} alt="Social Logo" id="social-flyer-img"/>
+                </div>
+                <h2>{social.event.eventTitle}</h2>
+                <h3>Hosted by: {social.hostName}</h3>
+            </div>
+        </div>
     );
 }
 }
