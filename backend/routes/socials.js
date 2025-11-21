@@ -7,7 +7,19 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try {
     const socials = await Social.find({});
+    console.log("Get /Socials")
     res.status(200).json(socials);
+    } catch(e) {
+        console.log(e.message);
+        res.status(400).json({ error: e.message})
+    }
+});
+
+router.get('/:id', async (req, res) => {
+    try {
+    const socialById = await Social.findById(req.params.id);
+    console.log("Get /Socials/:id")
+    res.status(200).json(socialById)
     } catch(e) {
         console.log(e.message);
         res.status(400).json({ error: e.message})
@@ -18,6 +30,7 @@ router.post('/', async (req, res) => {
     try {
         console.log(req.body)
         const social = await Social.create(req.body);
+        console.log("POST /Socials")
         res.status(200).json(social)
     } catch(e) {
         console.log(e.message);

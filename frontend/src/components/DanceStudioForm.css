@@ -1,0 +1,12 @@
+#form {
+    font-family: arial;
+    font-size: 14px;
+}
+
+.form-styling {
+    display: block
+}
+.input-styling {
+    display: block;
+    width: 100%;
+}

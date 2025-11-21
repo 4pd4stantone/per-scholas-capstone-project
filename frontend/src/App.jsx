@@ -6,6 +6,7 @@ import Header from './components/Header';
 import CreateEvent from './pages/CreateEvent';
 import GridView from './pages/GridView';
 import ListView from './pages/ListView';
+import EventView from "./pages/EventView";
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/socials/grid-view" element={ <GridView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn}/>} />
       <Route path="/socials/list-view" element={ <ListView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn}/>} />
       <Route path="/create-event" element={ <CreateEvent setHeader={setHeader}/>}/>
+      <Route path="/socials/event/:id" element={<EventView setHeader={setHeader}/>} />
     </Routes>
      
      

@@ -1,40 +1,40 @@
-import { useRef } from 'react';
+import './DanceStudioForm.css'
 
 export default function DanceStudioForm({ refs }) {
   return (
-    <>
+    <div id='form'>
       <h3>Host Information</h3>
 
       <div className="form-styling">
-        <label htmlFor="hostName">Host Name *</label>
-        <input id="hostName" name="hostName" type="text" required ref={refs.hostName}/>
+        <label htmlFor="hostName" >Host Name *</label>
+        <input id="hostName" name="hostName" type="text" required ref={refs.hostName} className='input-styling'/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="hostCompany">Host Company *</label>
-        <input id="hostCompany" name="hostCompany" type="text" required ref={refs.hostCompany}/>
+        <input id="hostCompany" name="hostCompany" type="text" required ref={refs.hostCompany} className='input-styling'/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="hostEmail">Host Email *</label>
-        <input id="hostEmail" name="hostEmail" type="email" required ref={refs.hostEmail}/>
+        <input id="hostEmail" name="hostEmail" type="email" required ref={refs.hostEmail} className='input-styling'/>
       </div>
 
       <h3>Event Information</h3>
 
       <div className="form-styling">
         <label htmlFor="eventTitle">Event Title *</label>
-        <input id="eventTitle" name="eventTitle" type="text" required ref={refs.eventTitle}/>
+        <input id="eventTitle" name="eventTitle" type="text" required ref={refs.eventTitle} className='input-styling'/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="eventDescription">Event Description *</label>
-        <textarea id="eventDescription" name="eventDescription" required ref={refs.eventDescription}/>
+        <textarea id="eventDescription" name="eventDescription" required ref={refs.eventDescription} className='input-styling'/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="danceStyles">Dance Style *</label>
-        <select id="danceStyles" name="danceStyles" required ref={refs.danceStyles}>
+        <select id="danceStyles" name="danceStyles" required ref={refs.danceStyles} >
           <option value="">Select an option</option>
           <option value="Salsa on 2">Salsa on 2</option>
           <option value="Urban Bachata">Urban Bachata</option>
@@ -50,7 +50,7 @@ export default function DanceStudioForm({ refs }) {
 
       <div className="form-styling">
         <label htmlFor="dressCode">Dress Code *</label>
-        <select id="dressCode" name="dressCode" required ref={refs.dressCode}>
+        <select id="dressCode" name="dressCode" required ref={refs.dressCode} >
           <option value="">Select</option>
           <option value="No Dress Code">No Dress Code</option>
           <option value="Casual">Casual</option>
@@ -69,17 +69,17 @@ export default function DanceStudioForm({ refs }) {
 
       <div className="form-styling">
         <label htmlFor="venueName">Venue Name *</label>
-        <input id="venueName" name="venueName" type="text" required ref={refs.venueName}/>
+        <input id="venueName" name="venueName" type="text" required ref={refs.venueName} className='input-styling'/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="venueStreet">Street Address *</label>
-        <input id="venueStreet" name="venueStreet" type="text" required ref={refs.venueStreet}/>
+        <input id="venueStreet" name="venueStreet" type="text" required ref={refs.venueStreet} className='input-styling'/>
       </div>
 
       <div className="form-styling">
         <label htmlFor="venueCity">City *</label>
-        <input id="venueCity" name="venueCity" type="text" required ref={refs.venueCity}/>
+        <input id="venueCity" name="venueCity" type="text" required ref={refs.venueCity} className='input-styling'/>
       </div>
 
       <div className="form-styling">
@@ -300,6 +300,6 @@ export default function DanceStudioForm({ refs }) {
           ref={refs.imgUrl}
         />
       </div>
-    </>
+    </div>
   );
 }

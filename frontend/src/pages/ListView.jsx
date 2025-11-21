@@ -20,10 +20,9 @@ const [socials, setSocials] = useState([]);
           <h4 id='events-found'>{socials.length} events found</h4>
             {socials.map((social, _id) => {
             return (
-              <>
                 <div key={social._id} className='list-box'>
                     <div className='list-heart-box'>
-                          <img src="" alt="" />
+                          {/* <img src="" alt="" /> */}
                     </div>
                     <div className='list-img-div'>
                         <img className='list-social-img' src={social.event.imgUrl || geoDanceLogo} alt="Social Logo" />
@@ -31,11 +30,11 @@ const [socials, setSocials] = useState([]);
                   <div className='list-info-box'>
                       <h4>{social.event.eventTitle}</h4>
                       <p >{social.event.venueName}</p>
-                      <p>{social.event.startDateTime}</p>
+                      <p>{new Date(social.event.startDateTime).toLocaleDateString()}</p>
+                      <p>{new Date(social.event.startDateTime).toLocaleTimeString()}</p>
                       <p className='list-danceStyle'>{social.event.danceStyles}</p>
                   </div>
                 </div>
-              </>
             );
             })}
         </section>

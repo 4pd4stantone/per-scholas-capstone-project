@@ -10,7 +10,7 @@
     border-radius: 20px;
 }
 .list-heart-box {
-    outline: red 1px solid;
+    /* outline: red 1px solid; */
     position: relative;
     top: -50px;
     right:-30px;
@@ -18,7 +18,7 @@
 }
 .list-img-div {
     margin: 20px;
-    outline: red 1px solid;
+    /* outline: red 1px solid; */
     display: flex;
     align-items: center;
     width: 90px;
