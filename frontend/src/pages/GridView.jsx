@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './GridView.css'
+import geoDanceLogo from '../assets/nav-logo-img.png'
 
 export default function GridView() {
 const [socials, setSocials] = useState([]);
@@ -27,7 +28,7 @@ const [socials, setSocials] = useState([]);
                         </div>
                       <div className='img-div'>
                         
-                        <img className='social-img' src={social.event.imgUrl} alt="Social Logo" />
+                        <img className='social-img' src={social.event.imgUrl || geoDanceLogo} alt="Social Logo" />
                       </div>
                       <p className='danceStyle'>{social.event.danceStyles}</p>
                   </div>

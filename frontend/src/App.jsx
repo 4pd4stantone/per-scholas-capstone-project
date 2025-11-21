@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom"
 import { useEffect, useState } from 'react'
 import './App.css';
 import Nav from './components/Nav';
@@ -9,10 +10,16 @@ function App() {
 
   return (
     <>
-     <Nav />
-     <Header />
-     {/* <CreateEvent /> */}
-    <GridView/> 
+    <Nav />
+    <Header />
+    <Routes>
+      <Route path="/" element={ <GridView/>} />
+      <Route path="/create-event" element={ <CreateEvent />} />
+    </Routes>
+     
+     
+    
+      
     </>
   )
 }

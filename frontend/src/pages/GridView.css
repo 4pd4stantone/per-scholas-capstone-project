@@ -1,19 +1,17 @@
 
 #grid-section {
     display: flex;
-    background-color: #fafafa;
     flex-wrap: wrap;
     justify-content: center;
 }
 #events-found {
-    position: absolute;
-    top: 150px;
-    left: 20px;
-    border: 1.5px solid red;
+    position: sticky;
+    top: 140px;
+    z-index: 0;
     color: rgb(109, 109, 109);
 }
 .grid-box {
-   
+    background-color: #fafafa;
     border-radius: 20px;
     width: 20%;
     min-width: 300px;
