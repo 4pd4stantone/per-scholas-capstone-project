@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import './ListView.css'
 import geoDanceLogo from '../assets/nav-logo-img.png'
 
-export default function GridView() {
+export default function GridView({input}) {
 const [socials, setSocials] = useState([]);
+const query = String(input).toLocaleLowerCase().trim();
+  console.log(query);
 
   useEffect(() => {
     async function getSocials() {
@@ -18,7 +20,20 @@ const [socials, setSocials] = useState([]);
     return (
         <section id='list-section'>
           <h4 id='events-found'>{socials.length} events found</h4>
-            {socials.map((social, _id) => {
+            {socials.filter((s) => {
+          const company = s.hostCompany.toLowerCase();
+          const eventTitle = s.event.eventTitle.toLowerCase();
+          const danceStyles = s.event.danceStyles.toLowerCase();
+          const venueName = (s.event.venueName).toLowerCase();
+          
+          return (
+            company.includes(query) ||
+            eventTitle.includes(query) ||
+            danceStyles.includes(query) ||
+            venueName.includes(query)
+          );
+        })
+            .map((social, _id) => {
             return (
                 <div key={social._id} className='list-box'>
                     <div className='list-heart-box'>

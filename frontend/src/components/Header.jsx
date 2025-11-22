@@ -11,7 +11,7 @@ export default function Header({headerBtn, setHeaderBtn, input, setInput}) {
     function handleClickList() {
         setHeaderBtn("List")
     }
-    function handleChange (e) {
+    function handleSearchChange (e) {
         setInput(e.target.value);
         console.log(input)
     }
@@ -32,7 +32,7 @@ export default function Header({headerBtn, setHeaderBtn, input, setInput}) {
             </div>
             <div id='header-bottom-row'>
                 <input type="date" id='date-input-filter' className='header-inputs'/>
-                <input type="text" id='input-search-field' className='header-inputs' name='search' placeholder="Search for socials" onChange={handleChange}/>
+                <input type="text" id='input-search-field' className='header-inputs' name='search' placeholder="Search for socials" onChange={handleSearchChange}/>
             </div>
         </header>
     
