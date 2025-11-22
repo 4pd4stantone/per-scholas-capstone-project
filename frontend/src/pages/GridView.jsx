@@ -26,16 +26,13 @@ export default function GridView({ input, setInput }) {
           const company = s.hostCompany.toLowerCase();
           const eventTitle = s.event.eventTitle.toLowerCase();
           const danceStyles = s.event.danceStyles.toLowerCase();
-          // const company = (s.hostCompany).toLowerCase();
-          // const company = (s.hostCompany).toLowerCase();
-          // const company = (s.hostCompany).toLowerCase();
-          // const company = (s.hostCompany).toLowerCase();
-          // const company = (s.hostCompany).toLowerCase();
-          // const company = (s.hostCompany).toLowerCase();
+          const venueName = (s.event.venueName).toLowerCase();
+          
           return (
             company.includes(query) ||
             eventTitle.includes(query) ||
-            danceStyles.includes(query)
+            danceStyles.includes(query) ||
+            venueName.includes(query)
           );
         })
         .map((social, _id) => {
