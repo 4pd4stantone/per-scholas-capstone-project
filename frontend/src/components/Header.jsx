@@ -3,13 +3,17 @@ import './Header.css'
 import { useState } from 'react'
 
 
-export default function Header({headerBtn, setHeaderBtn}) {
+export default function Header({headerBtn, setHeaderBtn, input, setInput}) {
 
     function handleClickGrid() {
         setHeaderBtn("Grid")
     }
     function handleClickList() {
         setHeaderBtn("List")
+    }
+    function handleChange (e) {
+        setInput(e.target.value);
+        console.log(input)
     }
 
     return (
@@ -28,7 +32,7 @@ export default function Header({headerBtn, setHeaderBtn}) {
             </div>
             <div id='header-bottom-row'>
                 <input type="date" id='date-input-filter' className='header-inputs'/>
-                <input type="text" id='input-search-field' className='header-inputs'/>
+                <input type="text" id='input-search-field' className='header-inputs' name='search' placeholder="Search for socials" onChange={handleChange}/>
             </div>
         </header>
     

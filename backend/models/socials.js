@@ -87,14 +87,6 @@ const socialSchema = mongoose.Schema({
     startDateTime: { type: Date, required: true },
     endDateTime: { type: Date, required: true },
 
-    recurrence: { type: Boolean, default: false },
-    frequency: {
-      type: String,
-      enum: ["weekly", "bi-weekly", "monthly"],
-      default: null,
-    },
-    repeatCount: { type: Number, min: 1, max: 12, default: null },
-
     price: { type: Number, required: true, min: 0 },
     isFree: { type: Boolean, default: false },
     studentPrice: { type: Number, min: 0, default: null },
