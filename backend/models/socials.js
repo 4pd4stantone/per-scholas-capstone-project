@@ -88,9 +88,7 @@ const socialSchema = mongoose.Schema({
     endDateTime: { type: Date, required: true },
 
     price: { type: Number, required: true, min: 0 },
-    isFree: { type: Boolean, default: false },
     studentPrice: { type: Number, min: 0, default: null },
-
     imgUrl: { type: String, trim: true, match: /^https?:\/\/.+/}
 
   },

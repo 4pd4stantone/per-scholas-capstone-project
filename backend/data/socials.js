@@ -20,14 +20,11 @@ const socials = [
       floorType: "Hardwood",
       startDateTime: "2025-11-21T21:00:00",
       endDateTime: "2025-11-22T00:00:00",
-      recurrence: true,
-      frequency: "weekly",
-      repeatCount: 12,
       price: 15,
-      isFree: false,
       studentPrice: 10,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png"
-    }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png",
+    },
   },
 
   {
@@ -51,14 +48,11 @@ const socials = [
       floorType: "Hardwood",
       startDateTime: "2025-11-22T21:00:00",
       endDateTime: "2025-11-23T00:00:00",
-      recurrence: true,
-      frequency: "weekly",
-      repeatCount: 12,
       price: 15,
-      isFree: false,
       studentPrice: 10,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png"
-    }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png",
+    },
   },
 
   {
@@ -82,14 +76,11 @@ const socials = [
       floorType: "Hardwood",
       startDateTime: "2025-11-21T21:00:00",
       endDateTime: "2025-11-22T00:00:00",
-      recurrence: true,
-      frequency: "weekly",
-      repeatCount: 12,
       price: 15,
-      isFree: false,
       studentPrice: 10,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png"
-    }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763657653/rnzq4iyhvri4undtqhcu.png",
+    },
   },
 
   {
@@ -113,14 +104,11 @@ const socials = [
       floorType: "Hardwood",
       startDateTime: "2025-11-21T21:00:00",
       endDateTime: "2025-11-22T00:30:00",
-      recurrence: true,
-      frequency: "weekly",
-      repeatCount: 12,
       price: 5,
-      isFree: false,
       studentPrice: null,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763660959/mjfhy3vyrebzquu0sdfh.png"
-    }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763660959/mjfhy3vyrebzquu0sdfh.png",
+    },
   },
 
   {
@@ -144,14 +132,11 @@ const socials = [
       floorType: "Hardwood",
       startDateTime: "2025-11-22T21:00:00",
       endDateTime: "2025-11-23T00:30:00",
-      recurrence: true,
-      frequency: "monthly",
-      repeatCount: 12,
       price: 5,
-      isFree: false,
       studentPrice: null,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763660959/mjfhy3vyrebzquu0sdfh.png"
-    }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763660959/mjfhy3vyrebzquu0sdfh.png",
+    },
   },
 
   {
@@ -175,14 +160,11 @@ const socials = [
       floorType: "Hardwood",
       startDateTime: "2025-08-22T21:00:00",
       endDateTime: "2025-08-23T02:30:00",
-      recurrence: false,
-      frequency: null,
-      repeatCount: null,
       price: 30,
-      isFree: false,
       studentPrice: null,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661181/unvvbckbmvzbdzwz9tnd.png"
-    }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661181/unvvbckbmvzbdzwz9tnd.png",
+    },
   },
 
   {
@@ -206,14 +188,11 @@ const socials = [
       floorType: "Hardwood",
       startDateTime: "2025-11-23T18:00:00",
       endDateTime: "2025-11-23T22:00:00",
-      recurrence: true,
-      frequency: "bi-weekly",
-      repeatCount: 12,
       price: 25,
-      isFree: false,
       studentPrice: 20,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661222/sktncl7ztvylgokvsbk5.png"
-    }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661222/sktncl7ztvylgokvsbk5.png",
+    },
   },
 
   {
@@ -237,14 +216,11 @@ const socials = [
       floorType: "Unknown",
       startDateTime: "2025-11-26T21:00:00",
       endDateTime: "2025-11-27T02:00:00",
-      recurrence: false,
-      frequency: null,
-      repeatCount: null,
       price: 20,
-      isFree: false,
       studentPrice: 15,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661222/sktncl7ztvylgokvsbk5.png"
-    }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661222/sktncl7ztvylgokvsbk5.png",
+    },
   },
 
   {
@@ -268,15 +244,12 @@ const socials = [
       floorType: "Hardwood",
       startDateTime: "2025-11-16T17:00:00",
       endDateTime: "2025-11-16T22:00:00",
-      recurrence: false,
-      frequency: null,
-      repeatCount: null,
       price: 20,
-      isFree: false,
       studentPrice: 15,
-      imgUrl: "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661308/bayhuexe9ztmtjgqfu7o.png"
-    }
-  }
+      imgUrl:
+        "https://res.cloudinary.com/dkdrhpx4c/image/upload/v1763661308/bayhuexe9ztmtjgqfu7o.png",
+    },
+  },
 ];
 
 export default socials;

@@ -31,11 +31,7 @@ export default function CreateEvent({ setHeader }) {
     floorType: useRef(null),
     startDateTime: useRef(null),
     endDateTime: useRef(null),
-    recurrence: useRef(null),
-    frequency: useRef(null),
-    repeatCount: useRef(null),
     price: useRef(null),
-    isFree: useRef(null),
     studentPrice: useRef(null),
     imgUrl: useRef(null),
   };
@@ -65,11 +61,7 @@ export default function CreateEvent({ setHeader }) {
       floorType: refs.floorType.current.value,
       startDateTime: refs.startDateTime.current.value,
       endDateTime: refs.endDateTime.current.value,
-      recurrence: refs.recurrence.current.checked,
-      frequency: refs.frequency.current.value,
-      repeatCount: refs.repeatCount.current.value,
       price: refs.price.current.value,
-      isFree: refs.isFree.current.checked,
       studentPrice: refs.studentPrice.current.value,
       imgUrl: refs.imgUrl.current.value,
       }

@@ -14,7 +14,8 @@ function App() {
 
   const [header, setHeader] = useState(true);
   const [headerBtn, setHeaderBtn] = useState("Grid");
-  const [input, setInput] = useState("")
+  const [input, setInput] = useState("");
+  const [dateFilter, setDateFilter] = useState("")
 
   useEffect(() => {
     setHeaderBtn("Grid");
@@ -25,10 +26,10 @@ function App() {
     <Nav header={header} setHeader={setHeader}
     
     />
-    {header ? <Header headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput}/> : ""}
+    {header ? <Header headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput} dateFilter={dateFilter} setDateFilter={setDateFilter}/> : ""}
     <Routes>
-      <Route path="/socials/grid-view" element={ <GridView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput}/>} />
-      <Route path="/socials/list-view" element={ <ListView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput}/>} />
+      <Route path="/socials/grid-view" element={ <GridView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput} dateFilter={dateFilter} setDateFilter={setDateFilter}/>} />
+      <Route path="/socials/list-view" element={ <ListView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput} dateFilter={dateFilter} setDateFilter={setDateFilter}/>} />
       <Route path="/create-event" element={ <CreateEvent setHeader={setHeader}/>}/>
       <Route path="/socials/event/:id" element={<EventView setHeader={setHeader}/>} />
     </Routes>

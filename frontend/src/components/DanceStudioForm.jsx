@@ -223,37 +223,6 @@ export default function DanceStudioForm({ refs }) {
         />
       </div>
 
-      <h3>Recurrence</h3>
-
-      <div className="form-styling">
-        <label>
-          <input type="checkbox" name="recurrence" value="true" ref={refs.recurrence}/>
-          This event repeats
-        </label>
-      </div>
-
-      <div className="form-styling">
-        <label htmlFor="frequency">Frequency</label>
-        <select id="frequency" name="frequency" ref={refs.frequency}>
-          <option value="">Select</option>
-          <option value="weekly">Weekly</option>
-          <option value="bi-weekly">Bi-weekly</option>
-          <option value="monthly">Monthly</option>
-        </select>
-      </div>
-
-      <div className="form-styling">
-        <label htmlFor="repeatCount">Number of Occurrences</label>
-        <input
-          id="repeatCount"
-          name="repeatCount"
-          type="number"
-          min="1"
-          max="12"
-          ref={refs.repeatCount}
-        />
-      </div>
-
       <h3>Pricing</h3>
 
       <div className="form-styling">
@@ -267,13 +236,6 @@ export default function DanceStudioForm({ refs }) {
           required
           ref={refs.price}
         />
-      </div>
-
-      <div className="form-styling">
-        <label>
-          <input type="checkbox" name="isFree" value="true" ref={refs.isFree}/>
-          This event is free
-        </label>
       </div>
 
       <div className="form-styling">

@@ -3,7 +3,7 @@ import './Header.css'
 import { useState } from 'react'
 
 
-export default function Header({headerBtn, setHeaderBtn, input, setInput}) {
+export default function Header({headerBtn, setHeaderBtn, input, setInput, setDateFilter}) {
 
     function handleClickGrid() {
         setHeaderBtn("Grid")
@@ -11,10 +11,24 @@ export default function Header({headerBtn, setHeaderBtn, input, setInput}) {
     function handleClickList() {
         setHeaderBtn("List")
     }
-    function handleSearchChange (e) {
+    function handleSearchChange(e) {
         setInput(e.target.value);
         console.log(input)
     }
+    function handleDateChange(e) {
+        const dateInput = e.target.value;
+
+        if(!dateInput) {
+            setDateFilter(null);
+            return;
+        }
+        const [year, month, day] = dateInput.split("-");
+        const localDate = new Date(year, month -1, day);
+        const correctDate = localDate.toLocaleDateString()
+        console.log(correctDate)
+        setDateFilter(correctDate);
+    }
+    
 
     return (
         <header >
@@ -31,7 +45,7 @@ export default function Header({headerBtn, setHeaderBtn, input, setInput}) {
                 </Link>
             </div>
             <div id='header-bottom-row'>
-                <input type="date" id='date-input-filter' className='header-inputs'/>
+                <input type="date" id='date-input-filter' className='header-inputs'name="date-filter" onChange={handleDateChange}/>
                 <input type="text" id='input-search-field' className='header-inputs' name='search' placeholder="Search for socials" onChange={handleSearchChange}/>
             </div>
         </header>

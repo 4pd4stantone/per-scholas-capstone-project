@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import "./GridView.css";
 import geoDanceLogo from "../assets/nav-logo-img.png";
 
-export default function GridView({ input, setInput }) {
+export default function GridView({ input, dateFilter }) {
   const [socials, setSocials] = useState([]);
   const query = String(input).toLocaleLowerCase().trim();
+  const dateQuery = dateFilter
   console.log(query);
 
   useEffect(() => {
@@ -26,14 +27,13 @@ export default function GridView({ input, setInput }) {
           const company = s.hostCompany.toLowerCase();
           const eventTitle = s.event.eventTitle.toLowerCase();
           const danceStyles = s.event.danceStyles.toLowerCase();
-          const venueName = (s.event.venueName).toLowerCase();
-          
-          return (
-            company.includes(query) ||
-            eventTitle.includes(query) ||
-            danceStyles.includes(query) ||
-            venueName.includes(query)
-          );
+          const venueName = s.event.venueName.toLowerCase();
+          const eventDate = new Date(s.event.startDateTime).toLocaleDateString();
+            const allQueries = !query || company.includes(query) ||
+            eventTitle.includes(query) || danceStyles.includes(query) || venueName.includes(query); 
+            const dateMatches = !dateFilter || eventDate === dateFilter;
+
+          return allQueries && dateMatches
         })
         .map((social, _id) => {
           return (

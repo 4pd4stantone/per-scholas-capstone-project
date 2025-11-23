@@ -15,6 +15,19 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/seed' , async (req, res) => {
+    try {
+        const resultDelete = await Social.deleteMany({});
+        const resutlInsert = await Social.insertMany(socialsData);
+        console.log({...resultDelete, ...resutlInsert});
+        res.redirect('/')
+
+    }catch(e){
+        console.log(e.message);
+        res.json({ erros: e.message})
+    }
+});
+
 router.get('/:id', async (req, res) => {
     try {
     const socialById = await Social.findById(req.params.id);
@@ -37,19 +50,5 @@ router.post('/', async (req, res) => {
         res.status(400).json({ error: e.message})
     }
 })
-
-
-router.get('/seed' , async (req, res) => {
-    try {
-        const resultDelete = await Social.deleteMany({});
-        const resutlInsert = await Social.insertMany(socialsData);
-        console.log({...resultDelete, ...resutlInsert});
-        res.redirect('/')
-
-    }catch(e){
-        console.log(e.message);
-        res.json({ erros: e.message})
-    }
-});
 
 export default router;
