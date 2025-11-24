@@ -4,12 +4,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-#events-found {
-    position: sticky;
-    top: 140px;
-    z-index: 0;
-    color: rgb(109, 109, 109);
-}
 .grid-box {
     background-color: #fafafa;
     border-radius: 20px;

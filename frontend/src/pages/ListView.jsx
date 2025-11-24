@@ -25,7 +25,6 @@ export default function GridView({ input, dateFilter }) {
 
   return (
     <section id="list-section">
-      <h4 id="events-found">{socials.length} events found</h4>
       {socials
         .filter((s) => {
           const company = s.hostCompany.toLowerCase();
