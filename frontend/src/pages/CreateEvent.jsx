@@ -4,9 +4,9 @@ import DanceStudioForm from "../components/DanceStudioForm";
 import ClubForm from "../components/ClubForm";
 import OutdoorForm from "../components/OutdoorForm";
 import CongressForm from "../components/CongressForm";
-import 'dotevn/config'
 
-export const BASE_URL = import.meta.end.VITE_BASE_URL
+
+export const BASE_URL = import.meta.env.VITE_BASE_URL
 
 export default function CreateEvent({ setHeader }) {
 
@@ -72,7 +72,7 @@ export default function CreateEvent({ setHeader }) {
     console.log(socialFormData);
 
     try {
-      const response = await fetch(`${BASE_URL}/Socials`, {
+      const response = await fetch(`http://localhost:8080/Socials`, {
         method: "POST",
         body: JSON.stringify(socialFormData),
         headers: {

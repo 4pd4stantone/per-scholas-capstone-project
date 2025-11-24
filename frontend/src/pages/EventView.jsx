@@ -2,9 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import geoDanceLogo from "../assets/nav-logo-img.png";
 import './EventView.css'
-import 'dotevn/config'
 
-export const BASE_URL = import.meta.end.VITE_BASE_URL
+export const BASE_URL = import.meta.env.VITE_BASE_URL
 
 export default function EventView({setHeader}){
 
@@ -20,7 +19,7 @@ const [social, setSocial] = useState(null);
 
   useEffect(() => {
     async function getSocial() {
-      const response = await fetch(`${BASE_URL}/Socials/${id}`);
+      const response = await fetch(`http://localhost:8080/Socials/${id}`);
       const data = await response.json();
       console.log(data);
     setSocial(data)

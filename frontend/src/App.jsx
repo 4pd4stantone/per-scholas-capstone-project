@@ -13,7 +13,7 @@ import EventView from "./pages/EventView";
 function App() {
 
   const [header, setHeader] = useState(true);
-  const [headerBtn, setHeaderBtn] = useState("Grid");
+  const [headerBtn, setHeaderBtn] = useState("");
   const [input, setInput] = useState("");
   const [dateFilter, setDateFilter] = useState("")
 
