@@ -40,7 +40,7 @@ export default function GridView({ input, dateFilter }) {
         .map((social, _id) => {
           return (
             <div key={social._id} className="grid-box">
-              <div className="img-box">
+              
                 <div className="heart-box">{/* <img src="" alt="" /> */}</div>
                 <div className="img-div">
                   <Link to={`/socials/event/${social._id}`}>
@@ -52,7 +52,6 @@ export default function GridView({ input, dateFilter }) {
                   </Link>
                 </div>
                 <p className="danceStyle">{social.event.danceStyles}</p>
-              </div>
 
               <div className="info-box">
                 <h4>{social.event.eventTitle}</h4>

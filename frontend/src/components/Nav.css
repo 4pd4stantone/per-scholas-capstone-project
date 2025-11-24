@@ -7,6 +7,7 @@ nav {
   position: sticky;
   background-color: #fafafa;
   top: 0;
+  z-index: 1;
 }
 
 .nav-logo-link {
