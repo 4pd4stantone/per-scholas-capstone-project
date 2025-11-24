@@ -32,7 +32,7 @@ const [social, setSocial] = useState(null);
 
   useEffect(() => {
     async function getSocial() {
-      const response = await fetch(`http://localhost:8080/socials/${id}`);
+      const response = await fetch(`${BASE_URL}/socials/${id}`);
       const data = await response.json();
       console.log(data);
     setSocial(data)
