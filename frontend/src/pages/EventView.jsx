@@ -38,8 +38,28 @@ const [social, setSocial] = useState(null);
                 <div id="img-box">
                     <img src={social.event.imgUrl || geoDanceLogo} alt="Social Logo" id="social-flyer-img"/>
                 </div>
-                <h2>{social.event.eventTitle}</h2>
-                <h3>Hosted by: {social.hostName}</h3>
+                <p className="eventView-danceStyle">{social.event.danceStyles}</p>
+                <h1>{social.event.eventTitle}</h1>
+                <h2>{social.event.eventDescription}</h2>
+                <h3 className="event-view-info">Event Type: {social.eventType} </h3>
+                <h3 className="event-view-info">Hosted by: {social.hostName}</h3>
+                <h3 className="event-view-info">Event Company: {social.hostCompany}</h3>
+                <h3 className="event-view-info">Email Contact: {social.hostEmail}</h3>
+                <h2>Venue Information</h2>
+                <h3 className="event-view-info">Venue Name: {social.event.venueName}</h3>
+                <h3 className="event-view-info">Venue Address: {social.event.venueStreet}, {social.event.venueCity}, {social.event.venueState}, {social.event.venueZipCode}, {social.event.venueCountry}</h3>
+                <h3 className="event-view-info">NYC area: {social.event.venueNYC}</h3>
+                <h3 className="event-view-info">Dance Floor: {social.event.floorType}</h3>
+                <h2>Event Date & Time</h2>
+                <h3 className="event-view-info">Date: {new Date(social.event.startDateTime).toLocaleDateString()}</h3>
+                <h3 className="event-view-info">Time: {new Date(social.event.startDateTime).toLocaleTimeString()} - {new Date(social.event.endDateTime).toLocaleTimeString()}</h3>
+                <h2>Pricing</h2>
+                <h3 className="event-view-info">Price: ${social.event.price}</h3>
+                <h3 className="event-view-info">Student Price: {social.event.studentPrice === 0 || null || undefined ? "" : `$${social.event.studentPrice}`}</h3>
+            </div>
+            <div className="event-view-btns">
+              <button className='edit-btn' >Edit Event</button>
+              <button className='delete-btn'>Delete Event</button>
             </div>
         </div>
     );

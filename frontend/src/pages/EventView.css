@@ -1,6 +1,7 @@
 
 #event-section {
     background-color: #fafafa;
+    
 }
 
 #event-box {
@@ -19,6 +20,8 @@
     width: 450px;
     height: 450px;
     margin: 0 auto 0 auto;
+     overflow: hidden;  
+     border-radius: 10px;
 }
 
 #social-flyer-img {
@@ -26,4 +29,43 @@
     border-radius: 10px;
     object-fit: contain;
     background-color: #000000 ;
+    transition: transform 0.3s ease;
+}
+#social-flyer-img:hover {
+    transform: scale(1.2);  
+    object-fit: contain;
+    
+}
+.eventView-danceStyle {
+    font-size: 15px;
+    background-color: #b8493c;
+    color: white;
+    margin: 20px auto 0px 0px;
+    padding: 6px 12px;
+    width: 130px;
+    text-align: center;
+    border-radius: 20px;
+}
+.event-view-info {
+    font-weight: 100;
+}
+
+.event-view-btns {
+    display: flex;
+    justify-content: center;
+    gap: 100px
+}
+.edit-btn, .delete-btn {
+    background-color: #b8493c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family:  Arial;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin:  25px 0px 25px 0;
+    width: 120px;
+    height: 30px;
+    font-size: 12px; 
+    font-weight: 500; 
 }
