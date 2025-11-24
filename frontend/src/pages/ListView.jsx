@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import './ListView.css'
 import geoDanceLogo from '../assets/nav-logo-img.png'
+import 'dotevn/config'
+
+export const BASE_URL = import.meta.end.VITE_BASE_URL
+
 
 export default function GridView({input}) {
 const [socials, setSocials] = useState([]);
@@ -9,7 +13,7 @@ const query = String(input).toLocaleLowerCase().trim();
 
   useEffect(() => {
     async function getSocials() {
-      const response = await fetch("http://localhost:8080/Socials");
+      const response = await fetch(`${BASE_URL}/Socials`);
       const data = await response.json();
       console.log(data);
       setSocials(data)
