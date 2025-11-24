@@ -39,7 +39,7 @@ main {
     justify-content: center;
 }
 .event-type-radio-btns[type="radio"]:checked {
-    accent-color: red;
+    accent-color: #b8493c;
 }
 .event-type-radio-box {
     border: 1.5px solid rgb(168, 168, 168);

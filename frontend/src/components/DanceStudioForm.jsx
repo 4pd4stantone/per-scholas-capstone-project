@@ -167,6 +167,7 @@ export default function DanceStudioForm({ refs }) {
           pattern="[0-9]{5}"
           required
           ref={refs.venueZipCode}
+          className='input-styling'
         />
       </div>
 
@@ -179,6 +180,7 @@ export default function DanceStudioForm({ refs }) {
           defaultValue="USA"
           required
           ref={refs.venueCountry}
+          className='input-styling'
         />
       </div>
 
@@ -209,6 +211,7 @@ export default function DanceStudioForm({ refs }) {
           type="datetime-local"
           required
           ref={refs.startDateTime}
+          className='input-styling'
         />
       </div>
 
@@ -220,6 +223,7 @@ export default function DanceStudioForm({ refs }) {
           type="datetime-local"
           required
           ref={refs.endDateTime}
+          className='input-styling'
         />
       </div>
 
@@ -235,6 +239,7 @@ export default function DanceStudioForm({ refs }) {
           step="0.01"
           required
           ref={refs.price}
+          className='input-styling'
         />
       </div>
 
@@ -247,6 +252,7 @@ export default function DanceStudioForm({ refs }) {
           min="0"
           step="0.01"
           ref={refs.studentPrice}
+          className='input-styling'
         />
       </div>
       <h3>Event Flyer</h3>
@@ -260,6 +266,7 @@ export default function DanceStudioForm({ refs }) {
           name="imgUrl"
           type="text"
           ref={refs.imgUrl}
+          className='input-styling'
         />
       </div>
     </div>
