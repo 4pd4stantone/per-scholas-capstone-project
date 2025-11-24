@@ -60,14 +60,18 @@ export default function GridView({ input, dateFilter }) {
                 </Link>
               </div>
               <div className="list-info-box">
-                <h4>{social.event.eventTitle}</h4>
-                <p>{social.event.venueName}</p>
-                <p>
+                <h4 className="list-title">{social.event.eventTitle}</h4>
+                <p className="list-venueName">{social.event.venueName}</p>
+              </div>
+              <div className="list-date-time-box">
+                <p className="date-time">
                   {new Date(social.event.startDateTime).toLocaleDateString()}
                 </p>
-                <p>
+                <p className="date-time">
                   {new Date(social.event.startDateTime).toLocaleTimeString()}
                 </p>
+              </div>
+              <div className="list-danceStyle-box">
                 <p className="list-danceStyle">{social.event.danceStyles}</p>
               </div>
             </div>
