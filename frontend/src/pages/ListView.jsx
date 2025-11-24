@@ -13,7 +13,7 @@ export default function GridView({ input, dateFilter }) {
 
   useEffect(() => {
     async function getSocials() {
-      const response = await fetch(`http://localhost:8080/Socials`);
+      const response = await fetch(`http://localhost:8080/socials`);
       const data = await response.json();
       console.log(data);
       setSocials(data);

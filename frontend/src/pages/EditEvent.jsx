@@ -74,7 +74,7 @@ const navigate = useNavigate();
     console.log(socialFormData);
 
     try {
-      const response = await fetch(`http://localhost:8080/Socials`, {
+      const response = await fetch(`http://localhost:8080/socials`, {
         method: "POST",
         body: JSON.stringify(socialFormData),
         headers: {

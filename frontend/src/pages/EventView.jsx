@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import geoDanceLogo from "../assets/nav-logo-img.png";
 import './EventView.css'
 
 export const BASE_URL = import.meta.env.VITE_BASE_URL
 
 export default function EventView({setHeader}){
-
+const navigate = useNavigate();
 const [social, setSocial] = useState(null);
 
  useEffect(() => {
@@ -16,10 +16,24 @@ const [social, setSocial] = useState(null);
   const { id } = useParams();
   console.log(id)
   
+  async function handleDelete() {
+    console.log('handleDelete');
+    try {
+      const response = await fetch(`http://localhost:8080/socials/${id}`, {
+        method: "DELETE"
+      })
+      const result = await response.json();
+      console.log(result);
+      console.log(id);
+    } catch(e) {
+      console.log(e)
+    }
+    navigate('/socials/grid-view')
+  }
 
   useEffect(() => {
     async function getSocial() {
-      const response = await fetch(`http://localhost:8080/Socials/${id}`);
+      const response = await fetch(`http://localhost:8080/socials/${id}`);
       const data = await response.json();
       console.log(data);
     setSocial(data)
@@ -61,7 +75,7 @@ const [social, setSocial] = useState(null);
               <Link>
               <button className='edit-btn' >Edit Event</button>
               </Link>
-              <button className='delete-btn'>Delete Event</button>
+              <button className='delete-btn' onClick={() => handleDelete(id)}>Delete Event</button>
             </div>
         </div>
     );
