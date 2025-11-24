@@ -7,7 +7,7 @@ import CreateEvent from './pages/CreateEvent';
 import GridView from './pages/GridView';
 import ListView from './pages/ListView';
 import EventView from "./pages/EventView";
-
+import Auth from './pages/Auth'
 
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
       <Route path="/socials/list-view" element={ <ListView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput} dateFilter={dateFilter} setDateFilter={setDateFilter}/>} />
       <Route path="/create-event" element={ <CreateEvent setHeader={setHeader}/>}/>
       <Route path="/socials/event/:id" element={<EventView setHeader={setHeader}/>} />
+      <Route path="/auth" element={<Auth />}/>
     </Routes>
      
      

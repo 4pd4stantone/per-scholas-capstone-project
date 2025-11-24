@@ -26,6 +26,9 @@ export default function Nav({setHeader, setHeaderBtn}) {
                 <h2 className="nav-create-event-title">Create Event</h2>
                 </Link>
             </div>
+            <div className="join-link">
+                <h2 className="nav-create-event-title" id="join-title">Join GeoDance</h2>
+            </div>
         </nav>
     
     )
