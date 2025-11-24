@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import geoDanceLogo from "../assets/nav-logo-img.png";
 import './EventView.css'
-
-export const BASE_URL = import.meta.env.VITE_BASE_URL
+import { BASE_URL } from '../App'
 
 export default function EventView({setHeader}){
 const navigate = useNavigate();
@@ -19,7 +18,7 @@ const [social, setSocial] = useState(null);
   async function handleDelete() {
     console.log('handleDelete');
     try {
-      const response = await fetch(`http://localhost:8080/socials/${id}`, {
+      const response = await fetch(`${BASE_URL}/socials/${id}`, {
         method: "DELETE"
       })
       const result = await response.json();

@@ -10,6 +10,7 @@ import EventView from "./pages/EventView";
 import Auth from './pages/Auth';
 import EditEvent from "./pages/EditEvent";
 
+export const BASE_URL = import.meta.env.VITE_BASE_URL
 
 function App() {
 

@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./GridView.css";
 import geoDanceLogo from "../assets/nav-logo-img.png";
+import { BASE_URL } from '../App'
 
-export const BASE_URL = import.meta.env.VITE_BASE_URL
 
 export default function GridView({ input, dateFilter }) {
   const [socials, setSocials] = useState([]);
@@ -13,7 +13,7 @@ export default function GridView({ input, dateFilter }) {
 
   useEffect(() => {
     async function getSocials() {
-      const response = await fetch(`http://localhost:8080/socials`);
+      const response = await fetch(`${BASE_URL}/socials`);
       const data = await response.json();
       console.log(data);
       setSocials(data);

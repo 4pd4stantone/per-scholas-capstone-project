@@ -5,9 +5,10 @@ import ClubForm from "../components/ClubForm";
 import OutdoorForm from "../components/OutdoorForm";
 import CongressForm from "../components/CongressForm";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from '../App'
 
 
-export const BASE_URL = import.meta.env.VITE_BASE_URL
+
 
 export default function EditEvent({ setHeader }) {
 const navigate = useNavigate();
@@ -74,7 +75,7 @@ const navigate = useNavigate();
     console.log(socialFormData);
 
     try {
-      const response = await fetch(`http://localhost:8080/socials`, {
+      const response = await fetch(`${BASE_URL}/socials`, {
         method: "POST",
         body: JSON.stringify(socialFormData),
         headers: {

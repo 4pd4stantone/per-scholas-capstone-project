@@ -1,9 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./Auth.css";
-
-
-
-export const BASE_URL = import.meta.env.VITE_BASE_URL
+import { BASE_URL } from '../App'
 
 export default function Auth( ) {
 
