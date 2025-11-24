@@ -4,11 +4,13 @@ import DanceStudioForm from "../components/DanceStudioForm";
 import ClubForm from "../components/ClubForm";
 import OutdoorForm from "../components/OutdoorForm";
 import CongressForm from "../components/CongressForm";
+import { useNavigate } from "react-router-dom";
 
 
 export const BASE_URL = import.meta.env.VITE_BASE_URL
 
 export default function CreateEvent({ setHeader }) {
+const navigate = useNavigate();
 
   useEffect(() => {
     setHeader(false);
@@ -87,6 +89,7 @@ export default function CreateEvent({ setHeader }) {
     } catch (e) {
       console.log(e);
     }
+    navigate('/socials/grid-view')
   }
 
   return (

@@ -45,6 +45,7 @@ router.post('/', async (req, res) => {
         const social = await Social.create(req.body);
         console.log("POST /Socials")
         res.status(200).json(social)
+        redirect('/')
     } catch(e) {
         console.log(e.message);
         res.status(400).json({ error: e.message})
