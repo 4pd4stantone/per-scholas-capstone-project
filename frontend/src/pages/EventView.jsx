@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import geoDanceLogo from "../assets/nav-logo-img.png";
 import './EventView.css'
 
@@ -55,10 +55,12 @@ const [social, setSocial] = useState(null);
                 <h3 className="event-view-info">Time: {new Date(social.event.startDateTime).toLocaleTimeString()} - {new Date(social.event.endDateTime).toLocaleTimeString()}</h3>
                 <h2>Pricing</h2>
                 <h3 className="event-view-info">Price: ${social.event.price}</h3>
-                <h3 className="event-view-info">Student Price: {social.event.studentPrice === 0 || null || undefined ? "" : `$${social.event.studentPrice}`}</h3>
+                <h3 className="event-view-info">{social.event.studentPrice === null || 0 || undefined ? "" : `Student Price: $${social.event.studentPrice}`}</h3>
             </div>
             <div className="event-view-btns">
+              <Link>
               <button className='edit-btn' >Edit Event</button>
+              </Link>
               <button className='delete-btn'>Delete Event</button>
             </div>
         </div>

@@ -12,6 +12,9 @@ export default function Nav({setHeader, setHeaderBtn}) {
     function handleClickCreateEvent () {
         setHeader(false)
     }
+    function handleClickJoin () {
+        setHeader(false)
+    }
 
     return (
         <nav >
@@ -27,7 +30,9 @@ export default function Nav({setHeader, setHeaderBtn}) {
                 </Link>
             </div>
             <div className="join-link">
+                <Link to="/auth" style={{textDecoration: "none"}} onClick={handleClickJoin}>
                 <h2 className="nav-create-event-title" id="join-title">Join GeoDance</h2>
+                </Link>
             </div>
         </nav>
     

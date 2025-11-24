@@ -7,7 +7,8 @@ import CreateEvent from './pages/CreateEvent';
 import GridView from './pages/GridView';
 import ListView from './pages/ListView';
 import EventView from "./pages/EventView";
-import Auth from './pages/Auth'
+import Auth from './pages/Auth';
+import EditEvent from "./pages/EditEvent";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <Route path="/create-event" element={ <CreateEvent setHeader={setHeader}/>}/>
       <Route path="/socials/event/:id" element={<EventView setHeader={setHeader}/>} />
       <Route path="/auth" element={<Auth />}/>
+      <Route path="/edit-event/:id" element={<EditEvent />} />
     </Routes>
      
      

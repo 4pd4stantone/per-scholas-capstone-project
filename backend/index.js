@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.json('You are connected to the server on port: ' + port)
 })
 
-app.use('/Socials', socialsRoutes);
+app.use('/socials', socialsRoutes);
 
 app.listen(8080, () => {
     console.log(`Listening on port: ${port}`)
