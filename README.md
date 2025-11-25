@@ -188,23 +188,6 @@ Recurrence settings
 
 Cloudinary image URL
 
-## Deployment Notes
-Fix React Router 404 on Netlify
-
-Create a _redirects file in /frontend/public:
-
-/*    /index.html   200
-
-Date formatting for <input type="datetime-local">
-
-Convert MongoDB ISO dates into:
-
-YYYY-MM-DDTHH:mm
-
-Cloudinary “Must supply api_key”
-
-Ensure your .env is loaded before calling Cloudinary config.
-
 ## Future Enhancements
 
 User login system
