@@ -89,7 +89,7 @@ useEffect(() => {
     refs.studentPrice.current.value = social.event.studentPrice;
 
     refs.imgUrl.current.value = social.event.imgUrl;
-  }, [social]);
+  }, [social, socialForm]);
 
   async function handleEdit(e) {
     e.preventDefault();
