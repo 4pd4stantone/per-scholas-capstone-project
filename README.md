@@ -1,8 +1,8 @@
 # GeoDance
 
-GeoDance is a full-stack MERN application that helps dancers discover, create, and share social dance events across New York City. The platform supports event hosts, dance studios, and dancers by providing tools to create events, upload flyers, browse socials, and explore weekly and recurring dance gatherings.
+GeoDance is a full-stack MERN application that helps dancers discover, create, and share social dance events across New York City. The platform supports event hosts and dance studios by providing tools to create events, upload flyers, browse socials, and explore weekly dance gatherings.
 
-This project was built as a capstone that combines real-world full-stack experience, modern frontend tooling, RESTful API design, and third-party integrations such as Cloudinary.
+This project was built as a capstone that combines real-world full-stack experience, modern frontend tooling, RESTful API design, and third-party integrations such as Cloudinary on the backend.
 
 
 <img width="1905" height="796" alt="Screenshot 2025-11-25 at 1 40 22 AM" src="https://github.com/user-attachments/assets/9d32c74b-7c49-4845-8d2c-c3063ef79f6d" />
@@ -12,19 +12,19 @@ This project was built as a capstone that combines real-world full-stack experie
 
 Multiple event types, including:
 
-Dance Studio Social
+-Dance Studio Social
 
-Club Event
+-Club Event
 
-Outdoor Event
+-Outdoor Event
 
-Congress/Event Weekender
+-Congress/Event Weekender
 
-Cloudinary image upload support
+Cloudinary image upload support on the backend
 
-Venue and event detail forms with validation
+Venue and event detail forms with backend validation
 
-Calendar date-time selection with correct formatting
+Calendar date-time selection
 
 
 <img width="1903" height="861" alt="Screenshot 2025-11-25 at 1 40 42 AM" src="https://github.com/user-attachments/assets/71eb27be-5b44-4558-a4cb-b35ca2721b0b" />
@@ -37,7 +37,7 @@ Individual event detail pages
 
 Date filtering with a calendar popup
 
-Auto-fallback to default logo when no image is provided
+Auto-fallback to default GeoDance logo when no image is provided
 
 ## Event Editing and Deletion
 
@@ -57,8 +57,6 @@ Express REST API
 Mongoose models for events, hosts, and venues
 
 Cloudinary uploader with Multer support
-
-Environment-based configuration
 
 JSON validation and error handling
 
@@ -91,7 +89,7 @@ dotenv
 
 Netlify for frontend (https://geodance.netlify.app/)
 
-Backend locally or deployed (Render recommended)
+Backend locally or deployed (Render)
 
 Netlify redirects to support React Router
 
@@ -137,10 +135,13 @@ npm install
 ## Environment Variables
 ## Backend .env
 PORT=8080
+
 MONGODB_URI=<your-mongo-uri>
 
 CLOUDINARY_CLOUD_NAME=<your-cloud-name>
+
 CLOUDINARY_API_KEY=<your-api-key>
+
 CLOUDINARY_API_SECRET=<your-api-secret>
 
 ## Frontend .env
@@ -168,13 +169,17 @@ http://localhost:8080
 ## API Endpoints
 ## Social Events
 GET     /socials
+
 POST    /socials
+
 GET     /socials/:id
+
 PUT     /socials/:id
+
 DELETE  /socials/:id
 
 
-Event objects contain:
+## Event objects contain:
 
 Host info
 
@@ -183,8 +188,6 @@ Event details
 Venue fields
 
 Pricing
-
-Recurrence settings
 
 Cloudinary image URL
 
@@ -196,7 +199,7 @@ Map and Calendar View
 
 Favorites and saved events
 
-Extended search filters (borough, style, time range)
+Extended search filters (borough, dance styles, time range)
 
 Push notifications
 
