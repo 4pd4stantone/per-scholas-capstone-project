@@ -45,15 +45,15 @@ export default function GridView({ input, dateFilter }) {
             <div key={social._id} className="grid-box">
               
                 <div className="heart-box">{/* <img src="" alt="" /> */}</div>
+                <Link to={`/socials/event/${social._id}`}>
                 <div className="img-div">
-                  <Link to={`/socials/event/${social._id}`}>
                     <img
                       className="social-img"
                       src={social.event.imgUrl || geoDanceLogo}
                       alt="Social Logo"
                     />
-                  </Link>
                 </div>
+                </Link>
                 <p className="danceStyle">{social.event.danceStyles}</p>
 
               <div className="info-box">
