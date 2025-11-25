@@ -68,7 +68,7 @@ const [social, setSocial] = useState(null);
                 <h3 className="event-view-info">Time: {new Date(social.event.startDateTime).toLocaleTimeString()} - {new Date(social.event.endDateTime).toLocaleTimeString()}</h3>
                 <h2>Pricing</h2>
                 <h3 className="event-view-info">Price: ${social.event.price}</h3>
-                <h3 className="event-view-info">{social.event.studentPrice === null || 0 || undefined ? "" : `Student Price: $${social.event.studentPrice}`}</h3>
+                <h3 className="event-view-info">{social.event.studentPrice ? `Student Price: $${social.event.studentPrice}` : null}</h3>
             </div>
             <div className="event-view-btns">
               <Link>

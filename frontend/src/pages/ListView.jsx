@@ -25,6 +25,7 @@ export default function GridView({ input, dateFilter }) {
 
   return (
     <section id="list-section">
+      {/* filter for events that match all the text queries and match the date if applicable */}
       {socials
         .filter((s) => {
           const company = s.hostCompany.toLowerCase();
@@ -34,14 +35,16 @@ export default function GridView({ input, dateFilter }) {
           const eventDate = new Date(
             s.event.startDateTime
           ).toLocaleDateString();
+          // checkng if the query is empty or if it matches any of the fields that follow
           const allQueries =
             !query ||
             company.includes(query) ||
             eventTitle.includes(query) ||
             danceStyles.includes(query) ||
             venueName.includes(query);
+          // if no date is chosen do not filter by date, otherwise filter by date that matches. 
           const dateMatches = !dateFilter || eventDate === dateFilter;
-
+          // filter by text query and/or date.
           return allQueries && dateMatches;
         })
         .map((social, _id) => {
