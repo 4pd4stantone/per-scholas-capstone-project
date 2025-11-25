@@ -36,7 +36,7 @@ function App() {
       <Route path="/create-event" element={ <CreateEvent setHeader={setHeader}/>}/>
       <Route path="/socials/event/:id" element={<EventView setHeader={setHeader}/>} />
       <Route path="/auth" element={<Auth />}/>
-      <Route path="/edit-event/:id" element={<EditEvent />} />
+      <Route path="/edit-event/:id" element={<EditEvent setHeader={setHeader} />} />
     </Routes>
      
      

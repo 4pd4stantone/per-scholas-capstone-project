@@ -96,12 +96,9 @@ const navigate = useNavigate();
   return (
     <main>
       <section>
-        <h2 id="create-event-title">Create New Event</h2>
-        <p id="create-event-subtitle">Create a new dance event.</p>
-        <h2 id="choose-event-type-title">Choose Your Event Type</h2>
+        <h2 id="choose-event-type-title">Edit Your Event</h2>
         <p id="choose-event-type-subtitle">
-          Select the type of event you're hosting. This will determine the
-          available features and options for your event.
+          Review the details below and update any information as needed.
         </p>
       </section>
       <form onSubmit={handleSubmit} method="Post">
@@ -181,7 +178,7 @@ const navigate = useNavigate();
             <button id="create-event-submit-btn">Create Event</button>
           ) : (
             <button id="create-event-submit-btn" disabled>
-              Create Event
+              Edit Event
             </button>
           )}
         </div>

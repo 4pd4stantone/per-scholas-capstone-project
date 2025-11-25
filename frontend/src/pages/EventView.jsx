@@ -17,6 +17,7 @@ const [social, setSocial] = useState(null);
   
   async function handleDelete() {
     console.log('handleDelete');
+    console.log(id)
     try {
       const response = await fetch(`${BASE_URL}/socials/${id}`, {
         method: "DELETE"
@@ -71,7 +72,7 @@ const [social, setSocial] = useState(null);
                 <h3 className="event-view-info">{social.event.studentPrice ? `Student Price: $${social.event.studentPrice}` : null}</h3>
             </div>
             <div className="event-view-btns">
-              <Link>
+              <Link to={`/edit-event/${id}`}>
               <button className='edit-btn' >Edit Event</button>
               </Link>
               <button className='delete-btn' onClick={() => handleDelete(id)}>Delete Event</button>
