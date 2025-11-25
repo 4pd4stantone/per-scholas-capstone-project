@@ -3,6 +3,8 @@
 GeoDance is a full-stack MERN application that helps dancers discover, create, and share social dance events across New York City. The platform supports event hosts, dance studios, and dancers by providing tools to create events, upload flyers, browse socials, and explore weekly and recurring dance gatherings.
 
 This project was built as a capstone that combines real-world full-stack experience, modern frontend tooling, RESTful API design, and third-party integrations such as Cloudinary.
+
+
 <img width="1905" height="796" alt="Screenshot 2025-11-25 at 1 40 22 AM" src="https://github.com/user-attachments/assets/9d32c74b-7c49-4845-8d2c-c3063ef79f6d" />
 
 ## Features
@@ -23,6 +25,8 @@ Cloudinary image upload support
 Venue and event detail forms with validation
 
 Calendar date-time selection with correct formatting
+
+
 <img width="1903" height="861" alt="Screenshot 2025-11-25 at 1 40 42 AM" src="https://github.com/user-attachments/assets/71eb27be-5b44-4558-a4cb-b35ca2721b0b" />
 
 ## Event Browsing
@@ -42,6 +46,8 @@ Edit pages pre-populate the form with existing values
 Events can be updated or deleted in real time
 
 Full client-side form control and fetch-based updates
+
+
 <img width="520" height="890" alt="Screenshot 2025-11-25 at 1 41 23 AM" src="https://github.com/user-attachments/assets/4805af6a-67af-4340-8185-018652073391" />
 
 ## Backend Capabilities
