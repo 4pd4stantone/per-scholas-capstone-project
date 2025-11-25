@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import './Header.css'
-import { useState } from 'react'
 
 
 export default function Header({headerBtn, setHeaderBtn, input, setInput, setDateFilter}) {
@@ -22,8 +21,11 @@ export default function Header({headerBtn, setHeaderBtn, input, setInput, setDat
             setDateFilter(null);
             return;
         }
+        // Date comes in YYYY-MM-DD format, the date is destructred by year, month and day, and the "-" is removed.
         const [year, month, day] = dateInput.split("-");
+        // js object created but months start at 0,hence the -1
         const localDate = new Date(year, month -1, day);
+        // date converted to MM/DD/YYYY format using toLocaleDateString.
         const correctDate = localDate.toLocaleDateString()
         console.log(correctDate)
         setDateFilter(correctDate);
