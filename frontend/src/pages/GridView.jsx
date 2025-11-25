@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./GridView.css";
 import geoDanceLogo from "../assets/nav-logo-img.png";
-import { BASE_URL } from '../App'
+import { BASE_URL } from '../App.jsx'
 
 
 export default function GridView({ input, dateFilter }) {
