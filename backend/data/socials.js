@@ -18,8 +18,8 @@ const socials = [
       venueZipCode: "10029",
       dressCode: "Casual",
       floorType: "Hardwood",
-      startDateTime: "2025-11-21T21:00:00",
-      endDateTime: "2025-11-22T00:00:00",
+      startDateTime: "2025-11-27T21:00:00",
+      endDateTime: "2025-11-28T00:00:00",
       price: 15,
       studentPrice: 10,
       imgUrl:
@@ -46,8 +46,8 @@ const socials = [
       venueZipCode: "10029",
       dressCode: "Casual",
       floorType: "Hardwood",
-      startDateTime: "2025-11-22T21:00:00",
-      endDateTime: "2025-11-23T00:00:00",
+      startDateTime: "2025-11-25T21:00:00",
+      endDateTime: "2025-11-26T00:00:00",
       price: 15,
       studentPrice: 10,
       imgUrl:
@@ -74,8 +74,8 @@ const socials = [
       venueZipCode: "11001",
       dressCode: "Casual",
       floorType: "Hardwood",
-      startDateTime: "2025-11-21T21:00:00",
-      endDateTime: "2025-11-22T00:00:00",
+      startDateTime: "2025-11-26T21:00:00",
+      endDateTime: "2025-11-27T00:00:00",
       price: 15,
       studentPrice: 10,
       imgUrl:
@@ -102,8 +102,8 @@ const socials = [
       venueZipCode: "11211",
       dressCode: "Casual",
       floorType: "Hardwood",
-      startDateTime: "2025-11-21T21:00:00",
-      endDateTime: "2025-11-22T00:30:00",
+      startDateTime: "2025-11-27T21:00:00",
+      endDateTime: "2025-11-28T00:30:00",
       price: 5,
       studentPrice: null,
       imgUrl:
@@ -130,8 +130,8 @@ const socials = [
       venueZipCode: "10456",
       dressCode: "Casual",
       floorType: "Hardwood",
-      startDateTime: "2025-11-22T21:00:00",
-      endDateTime: "2025-11-23T00:30:00",
+      startDateTime: "2025-11-28T21:00:00",
+      endDateTime: "2025-11-29T00:30:00",
       price: 5,
       studentPrice: null,
       imgUrl:
@@ -158,8 +158,8 @@ const socials = [
       venueZipCode: "10468",
       dressCode: "Casual",
       floorType: "Hardwood",
-      startDateTime: "2025-08-22T21:00:00",
-      endDateTime: "2025-08-23T02:30:00",
+      startDateTime: "2025-11-29T21:00:00",
+      endDateTime: "2025-11-30T02:30:00",
       price: 30,
       studentPrice: null,
       imgUrl:
@@ -186,8 +186,8 @@ const socials = [
       venueZipCode: "10001",
       dressCode: "Casual",
       floorType: "Hardwood",
-      startDateTime: "2025-11-23T18:00:00",
-      endDateTime: "2025-11-23T22:00:00",
+      startDateTime: "2025-11-28T18:00:00",
+      endDateTime: "2025-11-28T22:00:00",
       price: 25,
       studentPrice: 20,
       imgUrl:
@@ -196,7 +196,7 @@ const socials = [
   },
 
   {
-    eventType: "Club Social",
+    eventType: "Dance Studio Social",
     hostName: "Joel Dominguez",
     hostCompany: "La Clave NYC",
     hostEmail: "info@LVGSalsaSocial.com",
@@ -242,8 +242,8 @@ const socials = [
       venueZipCode: "10001",
       dressCode: "Casual",
       floorType: "Hardwood",
-      startDateTime: "2025-11-16T17:00:00",
-      endDateTime: "2025-11-16T22:00:00",
+      startDateTime: "2025-11-26T17:00:00",
+      endDateTime: "2025-11-26T22:00:00",
       price: 20,
       studentPrice: 15,
       imgUrl:

@@ -4,9 +4,9 @@ import geoDanceLogo from "../assets/nav-logo-img.png";
 import './EventView.css'
 import { BASE_URL } from '../App'
 
-export default function EventView({setHeader}){
+export default function EventView({setHeader, social, setSocial}){
 const navigate = useNavigate();
-const [social, setSocial] = useState(null);
+
 
  useEffect(() => {
     setHeader(false);

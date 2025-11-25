@@ -18,7 +18,9 @@ function App() {
   const [header, setHeader] = useState(true);
   const [headerBtn, setHeaderBtn] = useState("");
   const [input, setInput] = useState("");
-  const [dateFilter, setDateFilter] = useState("")
+  const [dateFilter, setDateFilter] = useState("");
+  const [social, setSocial] = useState(null);
+  
 
   useEffect(() => {
     setHeaderBtn("Grid");
@@ -33,10 +35,10 @@ function App() {
     <Routes>
       <Route path="/socials/grid-view" element={ <GridView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput} dateFilter={dateFilter} setDateFilter={setDateFilter}/>} />
       <Route path="/socials/list-view" element={ <ListView headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} input={input} setInput={setInput} dateFilter={dateFilter} setDateFilter={setDateFilter}/>} />
-      <Route path="/create-event" element={ <CreateEvent setHeader={setHeader}/>}/>
-      <Route path="/socials/event/:id" element={<EventView setHeader={setHeader}/>} />
+      <Route path="/create-event" element={ <CreateEvent setHeader={setHeader} />}/>
+      <Route path="/socials/event/:id" element={<EventView setHeader={setHeader} social={social} setSocial={setSocial}/>} />
       <Route path="/auth" element={<Auth />}/>
-      <Route path="/edit-event/:id" element={<EditEvent setHeader={setHeader} />} />
+      <Route path="/edit-event/:id" element={<EditEvent setHeader={setHeader}/>} />
     </Routes>
      
      

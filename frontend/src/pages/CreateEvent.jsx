@@ -10,12 +10,12 @@ import { BASE_URL } from '../App'
 
 export default function CreateEvent({ setHeader }) {
 const navigate = useNavigate();
-
+const [socialForm, setSocialForm] = useState(null);
   useEffect(() => {
     setHeader(false);
   }, []);
 
-  const [socialForm, setSocialForm] = useState(null);
+  
   const refs = {
     eventType: useRef(null),
     hostName: useRef(null),
